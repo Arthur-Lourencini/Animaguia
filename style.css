@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url('img/floresta.jfif');
     background-size: 100vh;
 }
@@ -38,9 +38,14 @@ nav ul {
 }
 
 section {
-    border: 0.1vh solid black;
-    margin: 1vh;
+    border: 0.3vh solid black;
     padding: 1vh;
     background-color: white;
     height: 100vh;
+}
+
+.titulo {
+    
+    background-color: rgba(255, 255, 255, 0.6);
+    
 }
