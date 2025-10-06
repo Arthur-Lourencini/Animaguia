@@ -52,16 +52,46 @@ section {
     border: 0.3vh solid black;
     padding: 1vh;
     background-color: white;
-    height: 100vh;
 }
 
 section h2 {
     font-size: 3em;
 }
 
+section h3 {
+    font-size: 2em;
+}
+
 section p {
     font-size: 1.25em;
     text-align: justify;
+}
+
+section img {
+    width: 20vw;
+    display: block;
+    margin: auto;
+}
+
+li {
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.fazenda {
+    display: flex;
+    gap: 1vh;
+    margin-top: 1vh;
+}
+
+.fazenda section, .fazenda aside {
+    border: 0.5vh solid rgb(158, 158, 158);
+    padding: 1.5vh;
+    flex: 1;
+}
+
+.fazenda section {
+    flex: 2;
 }
 
 footer {
