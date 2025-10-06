@@ -4,6 +4,10 @@ body {
     background-size: 100vh;
 }
 
+#fazendaBody {
+    background-image: url('img/fazenda.jpg');
+}
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-family: sans-serif;
@@ -42,6 +46,7 @@ nav ul {
 
 .navFlex li {
     padding: 0.75vh;
+    text-align: center;
 }
 
 .navFlex a:hover {
@@ -65,6 +70,11 @@ section h3 {
 section p {
     font-size: 1.25em;
     text-align: justify;
+}
+
+#carlos {
+    text-align: center;
+    font-size: 1.75em;
 }
 
 section img {
