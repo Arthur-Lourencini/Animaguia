@@ -60,7 +60,7 @@ nav ul {
 }
 
 .navFlex a img {
-    width: 5vw;
+    width: 3em;
 }
 
 .navFlex li {
@@ -72,11 +72,29 @@ nav ul {
     text-decoration: underline;
 }
 
+.pageFlex {
+    display: flex;
+    width: 100%;
+}
+
+.contentFlex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.content {
+    max-width: 50vw;
+}
+
+.margin {
+    width: 300px;
+}
+
 section {
     margin: 1vw;
     padding: 1vh;
     background-color: white;
-    height: 100vh;
 }
 
 aside {
@@ -92,41 +110,36 @@ section h3 {
 }
 
 section p {
-    font-size: 1.25em;
+    font-size: 1.15em;
     text-align: justify;
 }
 
 #carlos {
     text-align: center;
-    font-size: 1.75em;
+    font-size: 1.35em;
 }
 
 section img {
-    width: 30em;
+    width: 60%;
     display: block;
     margin: auto;
 }
 
 li {
-    text-align: justify;
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
 .fazenda {
-    display: flex;
-    gap: 1vh;
+    display: block;
     margin-top: 1vh;
 }
 
 .fazenda section, .fazenda aside {
-    border: 0.5vh solid rgb(158, 158, 158);
     padding: 1.5vh;
-    flex: 1;
 }
 
-.fazenda section {
-    flex: 2;
-}
+/*.fazenda section {
+}*/
 
 footer {
     background-color: rgb(150, 192, 140);
