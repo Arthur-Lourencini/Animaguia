@@ -29,7 +29,6 @@ nav {
 
 nav ul {
     list-style-type: none;
-    border: 0.1vh solid black;
     padding: 0%;
 }
 
@@ -38,6 +37,7 @@ nav ul {
 }
 
 .navFlex a {
+    border-radius: 5vh;
     flex: 1;
     border: 0.1vh solid black;
     align-content: center;
