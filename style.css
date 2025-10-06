@@ -1,4 +1,5 @@
 body {
+    margin: 0%;
     font-family: cursive;
     background-image: url('img/floresta.jfif');
     background-size: 100vw;
@@ -13,14 +14,26 @@ h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
 }
 
-.titulo {
-    
-    background-color: rgba(255, 255, 255, 0.6);
-    
+header {
+    background-color: green;
+    margin-top: 0%;
 }
 
 #TitPrin {
+    margin-top: 0%;
     font-size: 4em;
+    color: black;
+}
+
+#titulo {
+    background-image: url('img/floresta.jfif');
+    background-size: 100vw;
+    width: 80vw;
+    margin: auto;
+}
+
+.fundo {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 nav {
@@ -30,6 +43,7 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0%;
+    margin: 0%;
 }
 
 .navFlex {
@@ -37,15 +51,16 @@ nav ul {
 }
 
 .navFlex a {
-    border-radius: 5vh;
     flex: 1;
-    border: 0.1vh solid black;
     align-content: center;
     text-align: center;
     text-decoration: none;
-    color: inherit;
-    background-color: white;
-    font-size: 1.5em;
+    color: white;
+    font-size: 1em;
+}
+
+.navFlex a img {
+    width: 5vw;
 }
 
 .navFlex li {
@@ -54,14 +69,14 @@ nav ul {
 }
 
 .navFlex a:hover {
-    background-color: rgb(153, 214, 166);
+    text-decoration: underline;
 }
 
 section {
-    border-radius: 5vh;
-    border: 0.3vh solid rgba(158, 158, 158, 0.5);
+    margin: 1vw;
     padding: 1vh;
     background-color: white;
+    height: 100vh;
 }
 
 aside {
@@ -114,10 +129,7 @@ li {
 }
 
 footer {
-    border-radius: 5vh;
-    background-color: rgb(52, 82, 59);
-    color: white;
+    background-color: rgb(150, 192, 140);
     font-family: sans-serif;
-    margin-top: 1vh;
     padding: 0.7vw;
 }
