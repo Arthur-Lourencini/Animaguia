@@ -9,6 +9,18 @@ body {
     background-image: url('img/fazenda.jpg');
 }
 
+#zoologicoBody {
+    background-image: url('img/zoológico.jpg');
+}
+
+#aquarioBody {
+    background-image: url('img/aquário.jpg');
+}
+
+#domesticosBody {
+    background-image: url('img/casa.jpeg');
+}
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-family: sans-serif;
@@ -160,12 +172,12 @@ li {
     font-size: 1.15em;
 }
 
-.fazenda {
+.artigoDisplay {
     display: block;
     margin-top: 1vh;
 }
 
-.fazenda section, .fazenda aside {
+.artigoDisplay section, .artigoDisplay aside {
     padding: 1.5vh;
 }
 
