@@ -36,7 +36,7 @@ header {
     cursor: pointer;
 }
 
-.active, .collapse:hover {
+.active, .collapse:hover, .collapse:focus {
     background-color: rgb(0, 150, 0);
     color: white;
 }
@@ -46,6 +46,7 @@ header {
     font-weight: bold;
     float: right;
     margin-left: 5px;
+    color: white;
 }
 
 .active:after {
@@ -173,10 +174,14 @@ li {
     font-size: 1.5em;
     background-color: rgb(223, 223, 223);
     border: none;
+    border-radius: 2vw 2vw 0 0;
 }
 
-/*.fazenda section {
-}*/
+ul.content {
+    background-color: rgb(240, 240, 240);
+    border-radius: 0 0 2vw 2vw;
+    margin-top: 0;
+}
 
 footer {
     background-color: rgb(150, 192, 140);
