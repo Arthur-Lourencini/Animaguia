@@ -2,27 +2,33 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title>Site sobre Natureza</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animaguia | Início</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <h1><span class="titulo" id="TitPrin">Animaguia</span></h1>
-        <nav>
-            <ul>
-                <div class="navFlex">
-                    <a style="background-color: rgb(103, 163, 116);"><li>Início</li></a>
-                    <a href="animais-da-fazenda.html"><li>Animais da Fazenda</li></a>
-                    <a href="#test3"><li>Animais do Zoológico</li></a>
-                    <a href="#test4"><li>Animais do Aquário</li></a>
-                    <a href="#test5"><li>Animais Domésticos</li></a>
-                </div>
-            </ul>
-        </nav>
-        <section>
+        <header>
+            <button id="titulo" class="collapse">
+                <h1 id="TitPrin">Animaguia</h1>
+            </button>
+            <nav class="content">
+                <ul>
+                    <div class="navFlex">
+                        <a><img src="img/início.webp" alt="Início"><li>Início</li></a>
+                        <a href="animais-da-fazenda.html"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
+                        <a href="animais-do-zoologico.html"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
+                        <a href="animais-do-aquario.html"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
+                        <a href="animais-domesticos.html"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
             <h2>Bem-Vindo ao Animaguia!</h2>
             <p>O Animaguia é o seu guia para conhecer os animais mais comuns nos mais diferentes lugares!</p>
         </section>
     </body>
     <footer>
-        <p>Versão 0.1.1<br>&copy 2025 </p>
+        <p>Versão 0.1.1(alt-layout)<br>&copy 2025 </p>
     </footer>

@@ -1,4 +1,5 @@
 body {
+    margin: 0%;
     font-family: cursive;
     background-image: url('img/floresta.jfif');
     background-size: 100vw;
@@ -8,28 +9,80 @@ body {
     background-image: url('img/fazenda.jpg');
 }
 
+#zoologicoBody {
+    background-image: url('img/zoológico.jpg');
+}
+
+#aquarioBody {
+    background-image: url('img/aquário.jpg');
+}
+
+#domesticosBody {
+    background-image: url('img/casa.jpeg');
+}
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-family: sans-serif;
 }
 
-.titulo {
-    
-    background-color: rgba(255, 255, 255, 0.6);
-    
+header {
+    background-color: green;
+    margin-top: 0%;
 }
 
 #TitPrin {
-    font-size: 4em;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+}
+
+#titulo {
+    background-color: rgb(0, 175, 0);
+    width: 100%;
+    border: none;
+}
+
+.collapse {
+    cursor: pointer;
+}
+
+.active, .collapse:hover, .collapse:focus {
+    background-color: rgb(0, 150, 0);
+    color: white;
+}
+
+.collapse:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    color: white;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.fundo {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 nav {
-    border-radius: 5vh;
+    padding-top: 1.5vh;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0%;
+    margin: 0%;
 }
 
 .navFlex {
@@ -37,15 +90,16 @@ nav ul {
 }
 
 .navFlex a {
-    border-radius: 5vh;
     flex: 1;
-    border: 0.1vh solid black;
     align-content: center;
     text-align: center;
     text-decoration: none;
-    color: inherit;
-    background-color: white;
-    font-size: 1.5em;
+    color: white;
+    font-size: 1em;
+}
+
+.navFlex a img {
+    width: 3em;
 }
 
 .navFlex li {
@@ -54,14 +108,36 @@ nav ul {
 }
 
 .navFlex a:hover {
-    background-color: rgb(153, 214, 166);
+    text-decoration: underline;
+}
+
+.pageFlex {
+    display: flex;
+    width: 100%;
+}
+
+.contentFlex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.PageContent {
+    max-width: 50vw;
+}
+
+.margin {
+    width: 300px;
 }
 
 section {
-    border-radius: 5vh;
-    border: 0.3vh solid rgba(158, 158, 158, 0.5);
+    margin: 1vw;
     padding: 1vh;
     background-color: white;
+}
+
+.main {
+    min-height: 100vh;
 }
 
 aside {
@@ -77,47 +153,50 @@ section h3 {
 }
 
 section p {
-    font-size: 1.25em;
+    font-size: 1.15em;
     text-align: justify;
 }
 
 #carlos {
     text-align: center;
-    font-size: 1.75em;
+    font-size: 1.35em;
 }
 
 section img {
-    width: 30em;
+    width: 60%;
     display: block;
     margin: auto;
 }
 
 li {
-    text-align: justify;
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
-.fazenda {
-    display: flex;
-    gap: 1vh;
+.artigoDisplay {
+    display: block;
     margin-top: 1vh;
 }
 
-.fazenda section, .fazenda aside {
-    border: 0.5vh solid rgb(158, 158, 158);
+.artigoDisplay section, .artigoDisplay aside {
     padding: 1.5vh;
-    flex: 1;
 }
 
-.fazenda section {
-    flex: 2;
+.articleInfo {
+    width: 100%;
+    font-size: 1.5em;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    border-radius: 2vw 2vw 0 0;
+}
+
+ul.content {
+    background-color: rgb(240, 240, 240);
+    border-radius: 0 0 2vw 2vw;
+    margin-top: 0;
 }
 
 footer {
-    border-radius: 5vh;
-    background-color: rgb(52, 82, 59);
-    color: white;
+    background-color: rgb(150, 192, 140);
     font-family: sans-serif;
-    margin-top: 1vh;
     padding: 0.7vw;
 }
