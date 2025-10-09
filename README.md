@@ -1,16 +1,21 @@
 # Animaguia 🐾
 
+Animaguia é um site educativo e interativo para crianças que apresenta animais de diferentes habitats (fazenda, zoológico, aquário e domésticos). O conteúdo utiliza textos, imagens e pequenas interações JavaScript para tornar o aprendizado mais atraente.
+# Animaguia 🐾
+
 Bem-vindo ao **Animaguia**, um site educativo e divertido feito especialmente para crianças! Aqui você pode aprender sobre diferentes tipos de animais e seus habitats de forma interativa e colorida. 🌍✨
 
 ## 🌟 Sobre o Site
+## 🌟 Sobre o Site
+
 O **Animaguia** é um guia que apresenta informações sobre animais de fazendas, zoológicos, aquários e até mesmo animais domésticos. Cada seção do site é dedicada a um grupo de animais, com curiosidades e imagens para tornar o aprendizado mais interessante.
 
 ### Páginas Disponíveis:
 - **Início**: Uma introdução ao site e ao que você pode explorar.
 - **Animais da Fazenda**: Conheça os animais que vivem na fazenda do Sr. Carlos, como vacas, galinhas, porcos e ovelhas.
-- **Animais do Zoológico** *(em breve)*.
-- **Animais do Aquário** *(em breve)*.
-- **Animais Domésticos** *(em breve)*.
+- **Animais do Zoológico**: Página disponível com informações sobre animais típicos de zoológicos.
+- **Animais do Aquário**: Página disponível com informações sobre animais marinhos.
+- **Animais Domésticos**: Página disponível com informações sobre animais que vivem conosco.
 
 ## 🖼️ Imagens
 O site utiliza imagens para ilustrar os animais e seus habitats:
@@ -43,9 +48,34 @@ Cada animal tem uma seção com:
 - Tamanho, peso e expectativa de vida.
 - Curiosidades divertidas!
 
-## 🚀 Como Acessar
-Abra o arquivo `index.html` em qualquer navegador para começar sua jornada no **Animaguia**.
+## 🚀 Como Acessar Localmente
+Abra o diretório do projeto no seu gerenciador de arquivos e abra `index.html` em um navegador (Chrome, Firefox, Edge) para começar a explorar o site.
+
+Opcional — executar um servidor local (útil para testes):
+
+```bash
+# servindo em Python 3 (porta 8000)
+python3 -m http.server 8000
+# então abra http://localhost:8000 no navegador
+```
 
 ---
+
+## 🛠️ Desenvolvimento
+Este espaço foi criado para você registrar o status e o progresso do desenvolvimento do site. Atualize esta seção sempre que fizer mudanças importantes.
+
+### Status Atual (preencha aqui)
+
+- > Status: Em desenvolvimento — páginas da fazenda completa; esboço das demais páginas
+
+### Checklist de Desenvolvimento
+- [x] Estrutura HTML básica (index e páginas principais)
+- [x] Estilos CSS iniciais (`style.css`)
+- [x] Menus colapsáveis
+- [ ] Implementação de sons
+- [ ] Imagens interativas
+- [ ] Testes de responsividade e correções
+- [ ] Otimização geral da coesão do site
+- [x] Publicação / Deploy
 
 **Divirta-se explorando o mundo dos animais! 🐾**
