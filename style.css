@@ -200,3 +200,29 @@ footer {
     font-family: sans-serif;
     padding: 0.7vw;
 }
+
+@media screen and (max-width: 768px) {
+    .navFlex {
+        flex-direction: column;
+    }
+
+    .navFlex a {
+        font-size: 1.5em;
+    }
+
+    .navFlex a img {
+        width: 4em;
+    }
+
+    .PageContent {
+        max-width: 90vw;
+    }
+
+    section img {
+        width: 90%;
+    }
+
+    .margin {
+        display: none;
+    }
+}
