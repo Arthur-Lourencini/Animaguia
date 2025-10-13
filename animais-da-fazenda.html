@@ -10,31 +10,36 @@
     </head>
     <body id="fazendaBody">
         <header>
-            <button id="titulo" class="collapseNav">
-                <h1 id="TitPrin">Animaguia</h1>
-            </button>
-            <nav class="contentNav">
-                <ul>
-                    <div class="navFlex">
-                        <a href="index.html"><img src="img/início.webp" alt="Início"><li>Início</li></a>
-                        <a href="animais-da-fazenda.html"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
-                        <a href="animais-do-zoologico.html"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
-                        <a href="animais-do-aquario.html"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
-                        <a href="animais-domesticos.html"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
-                    </div>
-                </ul>
-            </nav>
+            <div class="headerFlex">
+                <button id="titulo" class="collapseNav">
+                    <h1 id="TitPrin">Animaguia</h1>
+                </button>
+                <nav class="contentNav">
+                    <ul>
+                        <div class="navFlex">
+                            <a href="index.html" class="navItem"><img src="img/início.webp" alt="Início"><li>Início</li></a>
+                            <a href="animais-da-fazenda.html" class="navItem"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
+                            <a href="animais-do-zoologico.html" class="navItem"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
+                            <a href="animais-do-aquario.html" class="navItem"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
+                            <a href="animais-domesticos.html" class="navItem"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <section class="main">
+            <button id="btnTopo" title="Voltar ao Início" onclick="window.scrollTo({top:0,behavior:'smooth'});">
+                ↑ Início
+            </button>
             <div class="pageFlex">
                 <div class="contentFlex">
-                    <article class="PageContent">
+                    <article class="PageContent fundo">
                         <h2>A Fazenda do Sr. Carlos</h2>
                         <p id="carlos">Sr. Carlos tem uma fazenda. Vamos dar uma olhada nos animais que ele tem!</p>
                         <div class="artigoDisplay" id="vaca">
                             <section>
                                 <h3>Vaca</h3>
-                                <img src="img/vaca.jpg" alt="Vaca">
+                                <a href="#vaca"><img src="img/vaca.jpg" alt="Vaca" class="animalLink"></a>
                                 <p>A vaca é um animal domesticado que é criado principalmente para a produção de leite e carne. Elas são conhecidas por sua natureza dócil e são frequentemente vistas pastando em campos abertos.</p>
                             </section>
                             <aside>
@@ -53,7 +58,7 @@
                         <div class="artigoDisplay" id="galinha">
                             <section>
                                 <h3>Galinha</h3>
-                                <img src="img/galinha.jpg" alt="Galinha">
+                                <a href="#galinha"><img src="img/galinha.jpg" alt="Galinha" class="animalLink"></a>
                                 <p>A galinha é uma ave domesticada que é criada principalmente para a produção de ovos e carne. Elas são conhecidas por sua capacidade de ciscar o chão em busca de alimento.</p>
                             </section>
                             <aside>
@@ -72,7 +77,7 @@
                         <div class="artigoDisplay" id="porco">
                             <section>
                                 <h3>Porco</h3>
-                                <img src="img/porco.jfif" alt="Porco">
+                                <a href="#porco"><img src="img/porco.jfif" alt="Porco" class="animalLink"></a>
                                 <p>O porco é um animal domesticado que é criado principalmente para a produção de carne. Eles são conhecidos por sua inteligência e capacidade de aprender rapidamente.</p>
                             </section>
                             <aside>
@@ -91,7 +96,7 @@
                         <div class="artigoDisplay" id="ovelha">
                             <section>
                                 <h3>Ovelha</h3>
-                                <img src="img/ovelha.jfif" alt="Ovelha">
+                                <a href="#ovelha"><img src="img/ovelha.jfif" alt="Ovelha" class="animalLink"></a>
                                 <p>A ovelha é um animal domesticado que é criado principalmente para a produção de lã, carne e leite. Elas são conhecidas por sua natureza dócil e convivência em grupos.</p>
                             </section>
                             <aside>
@@ -110,7 +115,7 @@
                         <div class="artigoDisplay" id="cabra">
                             <section>
                                 <h3>Cabra</h3>
-                                <img src="img/cabra.webp" alt="Cabra">
+                                <a href="#cabra"><img src="img/cabra.webp" alt="Cabra" class="animalLink"></a>
                                 <p>A cabra é um animal domesticado que é criado principalmente para a produção de leite, carne e pele. Elas são conhecidas por sua agilidade e capacidade de escalar terrenos íngremes.</p>
                             </section>
                             <aside>
@@ -130,7 +135,7 @@
                         <div class="artigoDisplay" id="pato">
                             <section>
                                 <h3>Pato</h3>
-                                <img src="img/pato.jfif" alt="Pato">
+                                <a href="#pato"><img src="img/pato.jfif" alt="Pato" class="animalLink"></a>
                                 <p>O pato é uma ave domesticada que é criada principalmente para a produção de ovos, carne e penas. Eles são conhecidos por sua habilidade de nadar e mergulhar em água.</p>
                             </section>
                             <aside>
@@ -150,7 +155,7 @@
                         <div class="artigoDisplay" id="ganso">
                             <section>
                                 <h3>Ganso</h3>
-                                <img src="img/ganso.jpg" alt="Ganso">
+                                <a href="#ganso"><img src="img/ganso.jpg" alt="Ganso" class="animalLink"></a>
                                 <p>O ganso é uma ave domesticada que é criada principalmente para a produção de carne, ovos e penas. Eles são conhecidos por sua natureza territorial e comportamento protetor.</p>
                             </section>
                             <aside>
