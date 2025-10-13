@@ -429,13 +429,21 @@ footer {
         padding: 0.5rem 1rem 1rem 1rem;
 }
 
-section {
-        margin: 2em auto;
-        padding: 2em;
-        max-width: 1200px;
-        background: var(--glass);
-        border-radius: 10px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+/* Use percentage width for main sections to avoid excessive stretching */
+section.main {
+    margin: 2em auto;
+    padding: 1.5em;
+    width: 92%;        /* percentage width */
+    max-width: 1100px; /* prevent stretching on very large screens */
+    background: var(--glass);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* fallback for any other section usage */
+section:not(.main) {
+    margin: 2em auto;
+    padding: 1.25em;
 }
 
 button {
