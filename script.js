@@ -54,8 +54,9 @@
         }
       }
 
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
         if (!contentNav) return;
+        e.stopPropagation();
         const isOpen = contentNav.classList.contains('open');
         if (isOpen) {
           closeNavElement(contentNav);
@@ -65,6 +66,17 @@
           btn.setAttribute('aria-expanded','true');
         }
       });
+
+      // Close nav when a link inside it is clicked (mobile friendly)
+      if (contentNav) {
+        contentNav.addEventListener('click', (ev) => {
+          const link = ev.target.closest('a');
+          if (link && window.innerWidth <= 900) {
+            closeNavElement(contentNav);
+            btn.setAttribute('aria-expanded','false');
+          }
+        });
+      }
     });
 
     // reset nav styles on resize to keep behavior consistent
@@ -87,6 +99,37 @@
           btn.setAttribute('aria-expanded','false');
         }
       });
+    });
+
+    // Close open navs when clicking outside (mobile)
+    document.addEventListener('click', (ev) => {
+      if (window.innerWidth > 900) return;
+      navToggleBtns.forEach(btn => {
+        const header = btn.closest('header') || document;
+        const contentNav = header.querySelector('.contentNav');
+        if (!contentNav) return;
+        if (!contentNav.classList.contains('open')) return;
+        const clickedInside = ev.target.closest('.contentNav') || ev.target.closest('.collapseNav');
+        if (!clickedInside) {
+          closeNavElement(contentNav);
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    });
+
+    // Close open navs with Escape key on mobile
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape') {
+        navToggleBtns.forEach(btn => {
+          const header = btn.closest('header') || document;
+          const contentNav = header.querySelector('.contentNav');
+          if (!contentNav) return;
+          if (contentNav.classList.contains('open')) {
+            closeNavElement(contentNav);
+            btn.setAttribute('aria-expanded','false');
+          }
+        });
+      }
     });
 
     // COLLAPSIBLE ARTICLE INFO

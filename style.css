@@ -40,6 +40,11 @@ body {
     color: #333;
 }
 
+/* Use border-box everywhere to avoid unexpected overflow from padding/borders */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root{
     --primary: #4CAF50;
     --primary-700: #2E7D32;
@@ -128,6 +133,30 @@ header {
     transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 
+/* Header layout helper to align the brand and nav toggle */
+.headerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Make the header toggle clearly visible and touch-friendly */
+.collapseNav {
+    background: transparent;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.collapseNav:focus {
+    outline: 3px solid rgba(100, 181, 75, 0.25);
+    border-radius: 8px;
+}
+
 .fundo {
     background-color: rgba(255, 255, 255, 0.6);
 }
@@ -193,8 +222,32 @@ nav ul {
 }
 
 .margin {
-    width: 0;
+    /* removed: layout spacer not needed; keep placeholder in case scripts reference it */
+    display: none;
 }
+
+/* Hamburger button styles */
+.hamburger {
+    width: 36px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+}
+.hamburger span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.25s ease, top 0.25s ease, opacity 0.2s ease;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 9px; }
+.hamburger span:nth-child(3) { top: 18px; }
+.collapseNav[aria-expanded="true"] .hamburger span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.collapseNav[aria-expanded="true"] .hamburger span:nth-child(2) { opacity: 0; }
+.collapseNav[aria-expanded="true"] .hamburger span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 /* Seções */
 section {
@@ -297,6 +350,45 @@ li {
     }
     .artigoDisplay aside {
         width: 100%;
+    }
+}
+
+/* Mobile-friendly article/card tweaks */
+@media screen and (max-width: 600px) {
+    .artigoDisplay {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    .artigoDisplay section, .artigoDisplay aside {
+        padding: 0.5rem;
+    }
+    .artigoDisplay h3 {
+        font-size: 1.2rem;
+    }
+    .artigoDisplay p, section p {
+        font-size: 1rem;
+    }
+    hr {
+        margin: 0.6rem 0;
+    }
+    .articleInfo {
+        font-size: 1.05rem;
+        padding: 0.6rem 0.75rem;
+    }
+    ul.content {
+        font-size: 0.95rem;
+    }
+    .artigoCard section img {
+        height: 140px;
+    }
+}
+
+/* Make footer links wrap nicely on small screens */
+@media screen and (max-width: 480px) {
+    .footerLinks {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
     }
 }
 
@@ -477,6 +569,9 @@ button:active {
 
     .contentNav.open {
         box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .navFlex {
@@ -488,5 +583,22 @@ button:active {
     .navFlex a {
         background: transparent;
         color: var(--primary-700);
+    }
+}
+
+/* Ensure the main section doesn't overflow on very small screens */
+@media screen and (max-width: 420px) {
+    section.main {
+        width: 96%;
+        padding: 1rem;
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+    .pageFlex, .contentFlex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .PageContent {
+        padding: 0.5rem;
     }
 }
