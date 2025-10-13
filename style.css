@@ -145,11 +145,12 @@ aside {
 }
 
 section h2 {
-    font-size: 3em;
+    font-size: 3.5em;
 }
 
 section h3 {
-    font-size: 2em;
+    font-size: 3.2em;
+    margin: 0.5em;
 }
 
 section p {
