@@ -156,6 +156,7 @@ section h3 {
 section p {
     font-size: 1.15em;
     text-align: justify;
+    margin-bottom: 0;
 }
 
 #carlos {
@@ -164,7 +165,7 @@ section p {
 }
 
 section img {
-    width: 60%;
+    width: 100%;
     display: block;
     margin: auto;
 }
