@@ -53,6 +53,7 @@ Este espaço foi criado para você registrar o status e o progresso do desenvolv
 - [x] Estrutura HTML básica (index e páginas principais)
 - [x] Estilos CSS iniciais (`style.css`)
 - [x] Menus colapsáveis
+- [ ] Versão do projeto como variável no JS
 - [ ] Implementação de sons
 - [ ] Imagens interativas
 - [ ] Testes de responsividade e correções
