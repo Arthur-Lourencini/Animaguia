@@ -1,8 +1,10 @@
 body {
-    margin: 0%;
-    font-family: cursive;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
     background-image: url('img/floresta.jfif');
-    background-size: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
 }
 
 #fazendaBody {
@@ -26,16 +28,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
 }
 
+/* Cabeçalho */
 header {
-    background-color: green;
-    margin-top: 0%;
+    background: linear-gradient(90deg, #4CAF50, #2E7D32);
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #TitPrin {
-    margin-top: 0%;
-    margin-bottom: 0%;
-    font-size: 5em;
-    color: rgb(255, 255, 255);
+    font-size: 3em;
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #titulo {
@@ -80,9 +84,11 @@ nav {
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0%;
-    margin: 0%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .navFlex {
@@ -94,8 +100,10 @@ nav ul {
     align-content: center;
     text-align: center;
     text-decoration: none;
-    color: white;
-    font-size: 1em;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0.5em;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .navFlex a img {
@@ -108,7 +116,8 @@ nav ul {
 }
 
 .navFlex a:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
 .pageFlex {
@@ -130,10 +139,14 @@ nav ul {
     width: 300px;
 }
 
+/* Seções */
 section {
-    margin: 1vw;
-    padding: 1vh;
-    background-color: white;
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .main {
@@ -145,7 +158,9 @@ aside {
 }
 
 section h2 {
-    font-size: 3.5em;
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 0.5em;
 }
 
 section h3 {
@@ -154,7 +169,8 @@ section h3 {
 }
 
 section p {
-    font-size: 1.15em;
+    font-size: 1.2em;
+    line-height: 1.6;
     text-align: justify;
     margin-bottom: 0;
 }
@@ -197,11 +213,29 @@ ul.content {
     margin-top: 0;
 }
 
-footer {
-    background-color: rgb(0, 156, 0);
-    font-family: sans-serif;
-    padding: 0.7vw;
+/* Botões */
+button {
+    background: #4CAF50;
     color: white;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #388E3C;
+}
+
+/* Rodapé */
+footer {
+    background: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
 }
 
 .footerLinks {
@@ -212,23 +246,29 @@ footer {
 }
 
 .footerLinks a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 1em;
 }
 
 .footerLinks a:hover, footer a {
     text-decoration: underline;
-    color: white;
+    color: #AED581;
 }
 
+/* Responsividade */
 @media screen and (max-width: 768px) {
+    #TitPrin {
+        font-size: 2em;
+    }
+
     .navFlex {
         flex-direction: column;
     }
 
     .navFlex a {
         font-size: 1.5em;
+        padding: 1em;
     }
 
     .navFlex a img {
@@ -237,6 +277,11 @@ footer {
 
     .PageContent {
         max-width: 90vw;
+    }
+
+    section {
+        margin: 1em;
+        padding: 1em;
     }
 
     section img {
