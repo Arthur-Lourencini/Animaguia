@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Animaguia | Início</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <button id="titulo" class="collapse">
-                <h1 id="TitPrin">Animaguia</h1>
-            </button>
-            <nav class="content">
-                <ul>
-                    <div class="navFlex">
-                        <a><img src="img/início.webp" alt="Início"><li>Início</li></a>
-                        <a href="animais-da-fazenda.html"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
-                        <a href="animais-do-zoologico.html"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
-                        <a href="animais-do-aquario.html"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
-                        <a href="animais-domesticos.html"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
-                    </div>
-                </ul>
-            </nav>
-        </header>
-        <section class="main">
-            <h2>Bem-Vindo ao Animaguia!</h2>
-            <p>O Animaguia é o seu guia para conhecer os animais mais comuns nos mais diferentes lugares!</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaguia | Início</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Animaguia</a>
+        <nav>
+            <a href="index.html" class="active">Início</a>
+            <a href="animais-da-fazenda.html">Fazenda</a>
+            <a href="animais-do-zoologico.html">Zoológico</a>
+            <a href="animais-do-aquario.html">Aquário</a>
+            <a href="animais-domesticos.html">Domésticos</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Bem-Vindo ao Animaguia! 🌍</h1>
+            <p>Seu guia completo para o fascinante mundo dos animais. Explore diferentes habitats e descubra curiosidades incríveis sobre cada criatura!</p>
         </section>
-    </body>
-    <footer>
-        <h2>Animaguia</h2>
-        <div class="footerLinks">
-            <a href="index.html">Início</a>
-            <a href="animais-da-fazenda.html">Animais da Fazenda</a>
-            <a href="animais-do-zoologico.html">Animais do Zoológico</a>
-            <a href="animais-do-aquario.html">Animais do Aquário</a>
-            <a href="animais-domesticos.html">Animais Domésticos</a>
-        </div>
-        <p><a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF">Repositório no GitHub</a><br>Versão 0.2.4 &copy 2025 </p>
-    </footer>
+
+        <section class="category-grid">
+            <a href="animais-da-fazenda.html" class="category-card" id="card-fazenda">
+                <img src="img/fazenda.webp" alt="Ícone de Fazenda">
+                <h2>Fazenda</h2>
+            </a>
+            <a href="animais-do-zoologico.html" class="category-card" id="card-zoologico">
+                <img src="img/zoológico.webp" alt="Ícone de Zoológico">
+                <h2>Zoológico</h2>
+            </a>
+            <a href="animais-do-aquario.html" class="category-card" id="card-aquario">
+                <img src="img/aquario.webp" alt="Ícone de Aquário">
+                <h2>Aquário</h2>
+            </a>
+            <a href="animais-domesticos.html" class="category-card" id="card-domesticos">
+                <img src="img/casa.webp" alt="Ícone de Domésticos">
+                <h2>Domésticos</h2>
+            </a>
+        </section>
+    </main>
+
+</body>
 </html>

@@ -1,186 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Animaguia | Animais da Fazenda</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body id="fazendaBody">
-        <header>
-            <button id="titulo" class="collapseNav">
-                <h1 id="TitPrin">Animaguia</h1>
-            </button>
-            <nav class="contentNav">
-                <ul>
-                    <div class="navFlex">
-                        <a href="index.html"><img src="img/início.webp" alt="Início"><li>Início</li></a>
-                        <a href="animais-da-fazenda.html"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
-                        <a href="animais-do-zoologico.html"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
-                        <a href="animais-do-aquario.html"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
-                        <a href="animais-domesticos.html"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
-                    </div>
-                </ul>
-            </nav>
-        </header>
-        <section class="main">
-            <div class="pageFlex">
-                <div class="contentFlex">
-                    <article class="PageContent">
-                        <h2>A Fazenda do Sr. Carlos</h2>
-                        <p id="carlos">Sr. Carlos tem uma fazenda. Vamos dar uma olhada nos animais que ele tem!</p>
-                        <div class="artigoDisplay" id="vaca">
-                            <section>
-                                <h3>Vaca</h3>
-                                <img src="img/vaca.jpg" alt="Vaca">
-                                <p>A vaca é um animal domesticado que é criado principalmente para a produção de leite e carne. Elas são conhecidas por sua natureza dócil e são frequentemente vistas pastando em campos abertos.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Bos taurus</em></li>
-                                    <li><strong>Habitat:</strong> Fazendas e pastagens</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (gramíneas, feno)</li>
-                                    <li><strong>Tamanho:</strong> 1,4 a 1,5 metros de altura</li>
-                                    <li><strong>Peso:</strong> 500 a 800 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 15 a 20 anos</li>
-                                    <li><strong>Curiosidade:</strong> Uma vaca pode produzir até 25 litros de leite por dia!</li>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="galinha">
-                            <section>
-                                <h3>Galinha</h3>
-                                <img src="img/galinha.jpg" alt="Galinha">
-                                <p>A galinha é uma ave domesticada que é criada principalmente para a produção de ovos e carne. Elas são conhecidas por sua capacidade de ciscar o chão em busca de alimento.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Gallus gallus domesticus</em></li>
-                                    <li><strong>Habitat:</strong> Fazendas e quintais</li>
-                                    <li><strong>Alimentação:</strong> Onívora (grãos, insetos)</li>
-                                    <li><strong>Tamanho:</strong> 40 a 50 cm de altura</li>
-                                    <li><strong>Peso:</strong> 1,5 a 4 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 5 a 10 anos</li>
-                                    <li><strong>Curiosidade:</strong> As galinhas podem reconhecer até 100 rostos diferentes!</li>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="porco">
-                            <section>
-                                <h3>Porco</h3>
-                                <img src="img/porco.jfif" alt="Porco">
-                                <p>O porco é um animal domesticado que é criado principalmente para a produção de carne. Eles são conhecidos por sua inteligência e capacidade de aprender rapidamente.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Sus scrofa domesticus</em></li>
-                                    <li><strong>Habitat:</strong> Fazendas e áreas rurais</li>
-                                    <li><strong>Alimentação:</strong> Onívora (raízes, frutas, pequenos animais)</li>
-                                    <li><strong>Tamanho:</strong> 0,9 a 1,5 metros de comprimento</li>
-                                    <li><strong>Peso:</strong> 100 a 300 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 10 a 15 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os porcos são excelentes nadadores e podem correr a velocidades de até 17 km/h!</li>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="ovelha">
-                            <section>
-                                <h3>Ovelha</h3>
-                                <img src="img/ovelha.jfif" alt="Ovelha">
-                                <p>A ovelha é um animal domesticado que é criado principalmente para a produção de lã, carne e leite. Elas são conhecidas por sua natureza dócil e convivência em grupos.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Ovis aries</em></li>
-                                    <li><strong>Habitat:</strong> Fazendas e pastagens</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (gramíneas, feno)</li>
-                                    <li><strong>Tamanho:</strong> 0,9 a 1,2 metros de altura</li>
-                                    <li><strong>Peso:</strong> 45 a 160 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 10 a 12 anos</li>
-                                    <li><strong>Curiosidade:</strong> As ovelhas têm uma visão panorâmica, podendo ver quase 360 graus ao seu redor!</li>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="cabra">
-                            <section>
-                                <h3>Cabra</h3>
-                                <img src="img/cabra.webp" alt="Cabra">
-                                <p>A cabra é um animal domesticado que é criado principalmente para a produção de leite, carne e pele. Elas são conhecidas por sua agilidade e capacidade de escalar terrenos íngremes.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Capra aegagrus hircus</em></li>
-                                    <li><strong>Habitat:</strong> Fazendas e áreas montanhosas</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (gramíneas, arbustos)</li>
-                                    <li><strong>Tamanho:</strong> 70 a 100 cm de altura</li>
-                                    <li><strong>Peso:</strong> 45 a 90 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 10 a 15 anos</li>
-                                    <li><strong>Curiosidade:</strong> As cabras têm pupilas retangulares, o que lhes dá uma visão periférica ampla para detectar predadores!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="pato">
-                            <section>
-                                <h3>Pato</h3>
-                                <img src="img/pato.jfif" alt="Pato">
-                                <p>O pato é uma ave domesticada que é criada principalmente para a produção de ovos, carne e penas. Eles são conhecidos por sua habilidade de nadar e mergulhar em água.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Anas platyrhynchos domesticus</em></li>
-                                    <li><strong>Habitat:</strong> Fazendas e áreas aquáticas</li>
-                                    <li><strong>Alimentação:</strong> Onívora (plantas aquáticas, insetos)</li>
-                                    <li><strong>Tamanho:</strong> 50 a 70 cm de comprimento</li>
-                                    <li><strong>Peso:</strong> 1 a 3 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 5 a 10 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os patos têm glândulas especiais que produzem óleo para impermeabilizar suas penas, mantendo-as secas enquanto nadam!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="ganso">
-                            <section>
-                                <h3>Ganso</h3>
-                                <img src="img/ganso.jpg" alt="Ganso">
-                                <p>O ganso é uma ave domesticada que é criada principalmente para a produção de carne, ovos e penas. Eles são conhecidos por sua natureza territorial e comportamento protetor.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Anser anser domesticus</em></li>
-                                    <li><strong>Habitat:</strong> Fazendas e áreas aquáticas</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (gramíneas, plantas aquáticas)</li>
-                                    <li><strong>Tamanho:</strong> 70 a 90 cm de comprimento</li>
-                                    <li><strong>Peso:</strong> 3 a 6 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 10 a 15 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os gansos têm uma excelente memória e podem reconhecer até 30 outros gansos e humanos!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                    </article>
-                </div>
-                <aside class="margin">
-                </aside>
-            </div>
-        </section>
-    </body>
-    <footer>
-        <h2>Animaguia</h2>
-        <div class="footerLinks">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaguia | Animais da Fazenda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Animaguia</a>
+        <nav>
             <a href="index.html">Início</a>
-            <a href="animais-da-fazenda.html">Animais da Fazenda</a>
-            <a href="animais-do-zoologico.html">Animais do Zoológico</a>
-            <a href="animais-do-aquario.html">Animais do Aquário</a>
-            <a href="animais-domesticos.html">Animais Domésticos</a>
+            <a href="animais-da-fazenda.html" class="active">Fazenda</a>
+            <a href="animais-do-zoologico.html">Zoológico</a>
+            <a href="animais-do-aquario.html">Aquário</a>
+            <a href="animais-domesticos.html">Domésticos</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>A Fazenda do Sr. Carlos</h1>
+            <p>Sr. Carlos tem uma fazenda. Vamos dar uma olhada nos animais que ele tem!</p>
         </div>
-        <p><a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF">Repositório no GitHub</a><br>Versão 0.2.4 &copy 2025 </p>
-    </footer>
+
+        <div class="animal-grid">
+            <div class="animal-card" data-nome="Vaca" data-cientifico="Bos taurus" data-habitat="Fazendas e pastagens" data-alimentacao="Herbívora (gramíneas, feno)" data-tamanho="1,4 a 1,5 metros de altura" data-peso="500 a 800 kg" data-vida="15 a 20 anos" data-curiosidade="Uma vaca pode produzir até 25 litros de leite por dia!">
+                <img src="img/vaca.jpg" alt="Vaca">
+                <div class="animal-card-content">
+                    <h3>Vaca</h3>
+                    <p>A vaca é um animal domesticado, criado para a produção de leite e carne. São conhecidas por sua natureza dócil.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Galinha" data-cientifico="Gallus gallus domesticus" data-habitat="Fazendas e quintais" data-alimentacao="Onívora (grãos, insetos)" data-tamanho="40 a 50 cm de altura" data-peso="1,5 a 4 kg" data-vida="5 a 10 anos" data-curiosidade="As galinhas podem reconhecer até 100 rostos diferentes!">
+                <img src="img/galinha.jpg" alt="Galinha">
+                <div class="animal-card-content">
+                    <h3>Galinha</h3>
+                    <p>A galinha é uma ave domesticada, criada para a produção de ovos e carne. São conhecidas por ciscar o chão.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Porco" data-cientifico="Sus scrofa domesticus" data-habitat="Fazendas e áreas rurais" data-alimentacao="Onívora (raízes, frutas, pequenos animais)" data-tamanho="0,9 a 1,5 metros de comprimento" data-peso="100 a 300 kg" data-vida="10 a 15 anos" data-curiosidade="Os porcos são excelentes nadadores e podem correr a velocidades de até 17 km/h!">
+                <img src="img/porco.jfif" alt="Porco">
+                <div class="animal-card-content">
+                    <h3>Porco</h3>
+                    <p>O porco é um animal domesticado, criado para a produção de carne. São conhecidos por sua inteligência.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Ovelha" data-cientifico="Ovis aries" data-habitat="Fazendas e pastagens" data-alimentacao="Herbívora (gramíneas, feno)" data-tamanho="0,9 a 1,2 metros de altura" data-peso="45 a 160 kg" data-vida="10 a 12 anos" data-curiosidade="As ovelhas têm uma visão panorâmica, podendo ver quase 360 graus ao seu redor!">
+                <img src="img/ovelha.jfif" alt="Ovelha">
+                <div class="animal-card-content">
+                    <h3>Ovelha</h3>
+                    <p>A ovelha é um animal domesticado, criado para a produção de lã, carne e leite. Vivem em grupos.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Cabra" data-cientifico="Capra aegagrus hircus" data-habitat="Fazendas e áreas montanhosas" data-alimentacao="Herbívora (gramíneas, arbustos)" data-tamanho="70 a 100 cm de altura" data-peso="45 a 90 kg" data-vida="10 a 15 anos" data-curiosidade="As cabras têm pupilas retangulares, o que lhes dá uma visão periférica ampla para detectar predadores!">
+                <img src="img/cabra.webp" alt="Cabra">
+                <div class="animal-card-content">
+                    <h3>Cabra</h3>
+                    <p>A cabra é um animal domesticado, criado para a produção de leite, carne e pele. Conhecidas por sua agilidade.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Pato" data-cientifico="Anas platyrhynchos domesticus" data-habitat="Fazendas e áreas aquáticas" data-alimentacao="Onívora (plantas aquáticas, insetos)" data-tamanho="50 a 70 cm de comprimento" data-peso="1 a 3 kg" data-vida="5 a 10 anos" data-curiosidade="Os patos têm glândulas especiais que produzem óleo para impermeabilizar suas penas!">
+                <img src="img/pato.jfif" alt="Pato">
+                <div class="animal-card-content">
+                    <h3>Pato</h3>
+                    <p>O pato é uma ave domesticada, criada para ovos, carne e penas. Conhecidos pela habilidade de nadar.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="animal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <ul id="modal-details"></ul>
+        </div>
+    </div>
+
+</body>
 </html>
