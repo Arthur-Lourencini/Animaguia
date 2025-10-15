@@ -123,7 +123,6 @@ header nav a.active {
     height: 60px;
     margin-bottom: 0.5em;
     z-index: 2;
-    filter: invert(1);
 }
 
 .category-card h2 {
