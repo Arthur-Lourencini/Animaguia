@@ -1,189 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Animaguia | Animais do Aquário</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body id="aquarioBody">
-        <header>
-            <button id="titulo" class="collapseNav">
-                <h1 id="TitPrin">Animaguia</h1>
-            </button>
-            <nav class="contentNav">
-                <ul>
-                    <div class="navFlex">
-                        <a href="index.html"><img src="img/início.webp" alt="Início"><li>Início</li></a>
-                        <a href="animais-da-fazenda.html"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
-                        <a href="animais-do-zoologico.html"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
-                        <a href="animais-do-aquario.html"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
-                        <a href="animais-domesticos.html"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
-                    </div>
-                </ul>
-            </nav>
-        </header>
-        <section class="main">
-            <div class="pageFlex">
-                <div class="contentFlex">
-                    <article class="PageContent">
-                        <h2>O Aquário Marinho</h2>
-                        <p id="aquario">Vamos explorar alguns dos fascinantes animais que vivem no aquário marinho!</p>
-                        <div class="artigoDisplay" id="tubarao">
-                            <section>
-                                <h3>Tubarão</h3>
-                                <img src="img/tubarão.webp" alt="Tubarão">
-                                <p>Os tubarões são peixes cartilaginosos conhecidos por sua força e agilidade. Eles são predadores no topo da cadeia alimentar marinha e desempenham um papel crucial na manutenção do equilíbrio dos ecossistemas oceânicos.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Selachimorpha</em></li>
-                                    <li><strong>Habitat:</strong> Oceanos e mares</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (peixes, moluscos, crustáceos)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 20 cm a mais de 12 metros</li>
-                                    <li><strong>Peso:</strong> Varia de 2 kg a mais de 20 toneladas</li>
-                                    <li><strong>Expectativa de Vida:</strong> 20 a 30 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os tubarões têm um sentido de olfato extremamente aguçado, podendo detectar uma gota de sangue em 25 litros de água!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="raia">
-                            <section>
-                                <h3>Raia</h3>
-                                <img src="img/raia.jpg" alt="Raia">
-                                <p>As raias são peixes cartilaginosos relacionados aos tubarões. Elas possuem um corpo achatado e nadadeiras peitorais que se estendem como asas. As raias são encontradas em águas costeiras e oceânicas ao redor do mundo.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Batoidea</em></li>
-                                    <li><strong>Habitat:</strong> Oceanos, mares e águas costeiras</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (peixes, moluscos, crustáceos)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 30 cm a mais de 7 metros de envergadura</li>
-                                    <li><strong>Peso:</strong> Varia de 1 kg a mais de 700 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 15 a 25 anos</li>
-                                    <li><strong>Curiosidade:</strong> Algumas espécies de raias possuem um ferrão venenoso na cauda, usado para defesa contra predadores!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="cavaloMarinho">
-                            <section>
-                                <h3>Cavalo-Marinho</h3>
-                                <img src="img/cavalo-marinho.webp" alt="Cavalo-Marinho">
-                                <p>Os cavalos-marinhos são peixes pequenos e únicos, conhecidos por sua aparência distinta que se assemelha a um cavalo. Eles são encontrados em águas rasas e quentes, geralmente em recifes de corais e vegetação marinha.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Hippocampus</em></li>
-                                    <li><strong>Habitat:</strong> Águas rasas, recifes de corais e vegetação marinha</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (pequenos crustáceos, plâncton)</li>
-                                    <li><strong>Tamanho:</strong> 1,5 a 35 cm de comprimento</li>
-                                    <li><strong>Peso:</strong> 0,5 a 1 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 3 a 5 anos</li>
-                                    <li><strong>Curiosidade:</strong> Nos cavalos-marinhos, é o macho que engravida e dá à luz aos filhotes!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="axolote">
-                            <section>
-                                <h3>Axolote</h3>
-                                <img src="img/axolote.webp" alt="Axolote">
-                                <p>O axolote é um anfíbio neotênico, o que significa que ele mantém características larvais durante toda a sua vida. Eles são conhecidos por sua capacidade de regenerar membros e outros tecidos do corpo. Os axolotes são encontrados principalmente em lagos e canais no México.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Ambystoma mexicanum</em></li>
-                                    <li><strong>Habitat:</strong> Lagos e canais de água doce</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (pequenos peixes, insetos, vermes)</li>
-                                    <li><strong>Tamanho:</strong> 15 a 45 cm de comprimento</li>
-                                    <li><strong>Peso:</strong> 100 a 300 g</li>
-                                    <li><strong>Expectativa de Vida:</strong> 10 a 15 anos</li>
-                                    <li><strong>Curiosidade:</strong> O axolote é capaz de regenerar não apenas membros, mas também partes do cérebro e da medula espinhal!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="foca">
-                            <section>
-                                <h3>Foca</h3>
-                                <img src="img/foca.jpg" alt="Foca">
-                                <p>As focas são mamíferos marinhos adaptados para a vida na água. Elas possuem um corpo hidrodinâmico e nadadeiras que as ajudam a nadar com eficiência. As focas são encontradas em várias regiões do mundo, desde águas frias até tropicais.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Pinnipedia</em></li>
-                                    <li><strong>Habitat:</strong> Oceanos, mares e costas rochosas</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (peixes, lulas, crustáceos)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 1 a 5 metros de comprimento</li>
-                                    <li><strong>Peso:</strong> Varia de 30 kg a mais de 1 tonelada</li>
-                                    <li><strong>Expectativa de Vida:</strong> 20 a 30 anos</li>
-                                    <li><strong>Curiosidade:</strong> As focas podem prender a respiração por até 30 minutos enquanto mergulham em busca de alimento!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div clas="artigoDisplay" id="polvo">
-                            <section>
-                                <h3>Polvo</h3>
-                                <img src="img/polvo.jpg" alt="Polvo">
-                                <p>Os polvos são moluscos marinhos conhecidos por sua inteligência e habilidades de camuflagem. Eles possuem oito braços flexíveis e são capazes de se espremer em espaços muito pequenos. Os polvos são encontrados em diversos habitats marinhos ao redor do mundo.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Octopoda</em></li>
-                                    <li><strong>Habitat:</strong> Oceanos e mares</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (peixes, crustáceos, moluscos)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 1 cm a mais de 3 metros de envergadura</li>
-                                    <li><strong>Peso:</strong> Varia de 30 g a mais de 50 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 1 a 3 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os polvos têm três corações e sangue azul devido à presença de cobre na hemocianina!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="pinguim">
-                            <section>
-                                <h3>Pinguim</h3>
-                                <img src="img/pinguim.webp" alt="Pinguim">
-                                <p>Os pinguins são aves marinhas que não voam, mas são excelentes nadadores. Eles possuem um corpo adaptado para a vida aquática, com asas que funcionam como nadadeiras. Os pinguins são encontrados principalmente no hemisfério sul, especialmente na Antártida.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Spheniscidae</em></li>
-                                    <li><strong>Habitat:</strong> Regiões costeiras e ilhas do hemisfério sul</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (peixes, krill, lulas)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 30 cm a mais de 1 metro de altura</li>
-                                    <li><strong>Peso:</strong> Varia de 1 kg a mais de 40 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 15 a 20 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os pinguins podem nadar a velocidades de até 15 km/h e mergulhar a profundidades de mais de 500 metros!</li>
-                                </ul>
-                            </aside>
-                    </article>
-                </div>
-                <aside class="margin">
-                </aside>
-            </div>
-        </section>
-    </body>
-    <footer>
-        <h2>Animaguia</h2>
-        <div class="footerLinks">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaguia | Animais do Aquário</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Animaguia</a>
+        <nav>
             <a href="index.html">Início</a>
-            <a href="animais-da-fazenda.html">Animais da Fazenda</a>
-            <a href="animais-do-zoologico.html">Animais do Zoológico</a>
-            <a href="animais-do-aquario.html">Animais do Aquário</a>
-            <a href="animais-domesticos.html">Animais Domésticos</a>
+            <a href="animais-da-fazenda.html">Fazenda</a>
+            <a href="animais-do-zoologico.html">Zoológico</a>
+            <a href="animais-do-aquario.html" class="active">Aquário</a>
+            <a href="animais-domesticos.html">Domésticos</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+        <button id="theme-toggle" title="Alterar tema">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>O Aquário Marinho</h1>
+            <p>Vamos explorar alguns dos fascinantes animais que vivem no aquário marinho!</p>
         </div>
-        <p><a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF">Repositório no GitHub</a><br>Versão 0.2.4 &copy 2025 </p>
+        <div class="animal-grid">
+            <div class="animal-card" data-nome="Tubarão" data-cientifico="Selachimorpha" data-habitat="Oceanos e mares" data-alimentacao="Carnívora" data-tamanho="Varia de 20 cm a 12 metros" data-peso="Varia de 2 kg a 20 toneladas" data-vida="20 a 30 anos" data-curiosidade="Possuem um olfato aguçado, detectando uma gota de sangue a quilômetros.">
+                <img src="img/tubarão.webp" alt="Tubarão">
+                <div class="animal-card-content">
+                    <h3>Tubarão</h3>
+                    <p>Os tubarões são peixes cartilaginosos conhecidos por sua força e agilidade. São predadores no topo da cadeia alimentar.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Raia" data-cientifico="Batoidea" data-habitat="Oceanos e águas costeiras" data-alimentacao="Carnívora" data-tamanho="Varia de 30 cm a 7 metros" data-peso="Varia de 1 kg a 700 kg" data-vida="15 a 25 anos" data-curiosidade="Algumas espécies possuem um ferrão venenoso na cauda para defesa!">
+                <img src="img/raia.jpg" alt="Raia">
+                <div class="animal-card-content">
+                    <h3>Raia</h3>
+                    <p>As raias são peixes cartilaginosos com um corpo achatado e nadadeiras peitorais que se estendem como asas.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Cavalo-Marinho" data-cientifico="Hippocampus" data-habitat="Águas rasas e recifes de corais" data-alimentacao="Carnívora" data-tamanho="1,5 a 35 cm" data-peso="Até 1 kg" data-vida="3 a 5 anos" data-curiosidade="Nos cavalos-marinhos, é o macho que engravida e dá à luz aos filhotes!">
+                <img src="img/cavalo-marinho.webp" alt="Cavalo-Marinho">
+                <div class="animal-card-content">
+                    <h3>Cavalo-Marinho</h3>
+                    <p>Os cavalos-marinhos são peixes pequenos e únicos, conhecidos por sua aparência que se assemelha a um cavalo.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Axolote" data-cientifico="Ambystoma mexicanum" data-habitat="Lagos de água doce" data-alimentacao="Carnívora" data-tamanho="15 a 45 cm" data-peso="100 a 300 g" data-vida="10 a 15 anos" data-curiosidade="É capaz de regenerar não apenas membros, mas também partes do cérebro e da medula espinhal!">
+                <img src="img/axolote.webp" alt="Axolote">
+                <div class="animal-card-content">
+                    <h3>Axolote</h3>
+                    <p>O axolote é um anfíbio que mantém características larvais durante toda a vida, famoso por sua capacidade de regeneração.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Polvo" data-cientifico="Octopoda" data-habitat="Oceanos e mares" data-alimentacao="Carnívora" data-tamanho="Varia de 1 cm a 3 metros" data-peso="Varia de 30 g a 50 kg" data-vida="1 a 3 anos" data-curiosidade="Os polvos têm três corações e sangue azul devido à presença de cobre!">
+                <img src="img/polvo.jpg" alt="Polvo">
+                <div class="animal-card-content">
+                    <h3>Polvo</h3>
+                    <p>Os polvos são moluscos marinhos conhecidos por sua inteligência e habilidades de camuflagem. Possuem oito braços.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Pinguim" data-cientifico="Spheniscidae" data-habitat="Regiões costeiras do hemisfério sul" data-alimentacao="Carnívora" data-tamanho="Varia de 30 cm a 1 metro" data-peso="Varia de 1 kg a 40 kg" data-vida="15 a 20 anos" data-curiosidade="São aves que não voam, mas são excelentes nadadores, usando suas asas como nadadeiras.">
+                <img src="img/pinguim.webp" alt="Pinguim">
+                <div class="animal-card-content">
+                    <h3>Pinguim</h3>
+                    <p>Os pinguins são aves marinhas que não voam, mas são excelentes nadadores. Vivem principalmente no hemisfério sul.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="animal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <ul id="modal-details"></ul>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-container">
+             <div class="footer-column">
+                <h3 class="logo">Animaguia</h3>
+                <p>Seu guia completo para o fascinante mundo dos animais.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Páginas</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="animais-da-fazenda.html">Fazenda</a></li>
+                    <li><a href="animais-do-zoologico.html">Zoológico</a></li>
+                    <li><a href="animais-do-aquario.html">Aquário</a></li>
+                    <li><a href="animais-domesticos.html">Domésticos</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Integrantes</h3>
+                <ul>
+                    <li>Arthur Lourencini</li>
+                    <li>Bruno Carvalho de Oliveira</li>
+                    <li>Gustavo Duarte Strob</li>
+                    <li>Miguel Cardoso Alcalde</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sobre o Projeto</h3>
+                <p>Projeto educativo para a disciplina de Web Design.</p>
+                <a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF" target="_blank">Repositório no GitHub →</a>
+            </div>
+        </div>
     </footer>
+    <a href="#" id="back-to-top" class="back-to-top-button" title="Voltar ao topo">↑</a>
+</body>
 </html>

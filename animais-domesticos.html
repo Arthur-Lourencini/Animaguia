@@ -1,190 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Animaguia | Animais Domésticos</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body id="domesticosBody">
-        <header>
-            <button id="titulo" class="collapseNav">
-                <h1 id="TitPrin">Animaguia</h1>
-            </button>
-            <nav class="contentNav">
-                <ul>
-                    <div class="navFlex">
-                        <a href="index.html"><img src="img/início.webp" alt="Início"><li>Início</li></a>
-                        <a href="animais-da-fazenda.html"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
-                        <a href="animais-do-zoologico.html"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
-                        <a href="animais-do-aquario.html"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
-                        <a href="animais-domesticos.html"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
-                    </div>
-                </ul>
-            </nav>
-        </header>
-        <section class="main">
-            <div class="pageFlex">
-                <div class="contentFlex">
-                    <article class="PageContent">
-                        <h2>Meus Amigos de Quatro Patas</h2>
-                        <p id="casa">Vamos conhecer alguns dos animais domésticos mais comuns que vivem conosco!</p>
-                        <div class="artigoDisplay" id="cachorro">
-                            <section>
-                                <h3>Cachorro</h3>
-                                <img src="img/cachorro.jpg" alt="Cachorro">
-                                <p>O cachorro é conhecido como o melhor amigo do homem. Eles são leais, amorosos e  proporcionam companhia e segurança aos seus donos.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Canis lupus familiaris</em></li>
-                                    <li><strong>Habitat:</strong> Casas e quintais</li>
-                                    <li><strong>Alimentação:</strong> Onívora (ração comercial, carne, vegetais)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 15 cm a 1 metro de altura</li>
-                                    <li><strong>Peso:</strong> Varia de 1 kg a mais de 70 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 10 a 13 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os cachorros têm um olfato extremamente apurado, podendo detectar cheiros até 100.000 vezes melhor que os humanos!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="gato">
-                            <section>
-                                <h3>Gato</h3>
-                                <img src="img/gato.jfif" alt="Gato">
-                                <p>Os gatos são animais independentes e curiosos. Eles são conhecidos por sua habilidade de caça e por serem ótimos companheiros para quem gosta de um animal mais tranquilo.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Felis catus</em></li>
-                                    <li><strong>Habitat:</strong> Casas e apartamentos</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (ração comercial, carne)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 20 cm a 40 cm de altura</li>
-                                    <li><strong>Peso:</strong> Varia de 3 kg a 7 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 12 a 15 anos</li>
-                                    <li><strong>Curiosidade:</strong> Os gatos têm um órgão especial chamado "órgão de Jacobson" que lhes permite "cheirar" com a boca, ajudando-os a detectar feromônios e outros cheiros sutis.</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="peixe">
-                            <section>
-                                <h3>Peixe</h3>
-                                <img src="img/peixe.jpg" alt="Peixe">
-                                <p>Os peixes são animais aquáticos que podem ser mantidos em aquários. Eles são conhecidos por sua variedade de cores e formas, além de serem relativamente fáceis de cuidar.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> Varia conforme a espécie (ex: <em>Betta splendens</em> para o peixe Betta)</li>
-                                    <li><strong>Habitat:</strong> Aquários domésticos</li>
-                                    <li><strong>Alimentação:</strong> Onívora (ração específica para peixes, alimentos vivos ou congelados)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 2 cm a 30 cm, dependendo da espécie</li>
-                                    <li><strong>Peso:</strong> Varia de alguns gramas a mais de 1 kg, dependendo da espécie</li>
-                                    <li><strong>Expectativa de Vida:</strong> Varia de 1 a 10 anos, dependendo da espécie e dos cuidados</li>
-                                    <li><strong>Curiosidade:</strong> Alguns peixes, como o peixe Betta, são conhecidos por sua agressividade e territorialidade, especialmente os machos.</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="hamster">
-                            <section>
-                                <h3>Hamster</h3>
-                                <img src="img/hamster.webp" alt="Hamster">
-                                <p>Os hamsters são pequenos roedores que são populares como animais de estimação devido ao seu tamanho compacto e personalidade amigável. Eles são ativos e gostam de explorar seu ambiente.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> Varia conforme a espécie (ex: <em>Mesocricetus auratus</em> para o hamster sírio)</li>
-                                    <li><strong>Habitat:</strong> Gaiolas domésticas</li>
-                                    <li><strong>Alimentação:</strong> Onívora (ração específica para hamsters, sementes, frutas e vegetais)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 10 cm a 20 cm, dependendo da espécie</li>
-                                    <li><strong>Peso:</strong> Varia de 100 g a 200 g, dependendo da espécie</li>
-                                    <li><strong>Expectativa de Vida:</strong> 2 a 3 anos</li>
-                                    <li><strong>Curiosidade:</strong> Hamsters têm bochechas expansíveis que podem armazenar comida para levar para seu ninho!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="coelho">
-                            <section>
-                                <h3>Coelho</h3>
-                                <img src="img/coelho.webp" alt="Coelho">
-                                <p>Os coelhos são animais sociais e afetuosos que gostam de companhia. Eles são conhecidos por suas orelhas longas e sua habilidade de saltar grandes distâncias.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Oryctolagus cuniculus</em></li>
-                                    <li><strong>Habitat:</strong> Gaiolas ou áreas cercadas em casas</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (feno, vegetais, ração específica para coelhos)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 20 cm a 50 cm, dependendo da raça</li>
-                                    <li><strong>Peso:</strong> Varia de 1 kg a 5 kg, dependendo da raça</li>
-                                    <li><strong>Expectativa de Vida:</strong> 8 a 12 anos</li>
-                                    <li><strong>Curiosidade:</strong> Coelhos têm dentes que crescem continuamente, por isso precisam roer objetos para mantê-los no tamanho adequado.</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="papagaio">
-                            <section>
-                                <h3>Papagaio</h3>
-                                <img src="img/papagaio.jfif" alt="Papagaio">
-                                <p>Os papagaios são aves inteligentes e coloridas que podem aprender a imitar sons e palavras. Eles são sociais e gostam de interagir com seus donos.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> Varia conforme a espécie (ex: <em>Ara macao</em> para o papagaio Arara)</li>
-                                    <li><strong>Habitat:</strong> Gaiolas ou viveiros domésticos</li>
-                                    <li><strong>Alimentação:</strong> Onívora (ração específica para aves, frutas, vegetais, sementes)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 20 cm a 1 metro, dependendo da espécie</li>
-                                    <li><strong>Peso:</strong> Varia de 100 g a mais de 1 kg, dependendo da espécie</li>
-                                    <li><strong>Expectativa de Vida:</strong> Varia de 10 a 80 anos, dependendo da espécie</li>
-                                    <li><strong>Curiosidade:</strong> Papagaios têm uma língua muscular que lhes permite manipular objetos e alimentos com grande habilidade.</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="tartaruga">
-                            <section>
-                                <h3>Tartaruga</h3>
-                                <img src="img/tartaruga.webp" alt="Tartaruga">
-                                <p>As tartarugas são répteis conhecidos por sua carapaça dura que as protege de predadores. Elas são animais tranquilos e podem viver tanto em ambientes aquáticos quanto terrestres.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> Varia conforme a espécie (ex: <em>Testudo graeca</em> para a tartaruga-de-grecia)</li>
-                                    <li><strong>Habitat:</strong> Aquários ou terrários domésticos</li>
-                                    <li><strong>Alimentação:</strong> Varia conforme a espécie (herbívora, onívora ou carnívora)</li>
-                                    <li><strong>Tamanho:</strong> Varia de 10 cm a mais de 1 metro, dependendo da espécie</li>
-                                    <li><strong>Peso:</strong> Varia de 100 g a mais de 100 kg, dependendo da espécie</li>
-                                    <li><strong>Expectativa de Vida:</strong> Varia de 20 a mais de 100 anos, dependendo da espécie</li>
-                                    <li><strong>Curiosidade:</strong> Tartarugas podem viver por muitos anos, e algumas espécies são conhecidas por sua longevidade excepcional!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                    </article>
-                    <aside class="margin">
-                    </aside>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaguia | Animais Domésticos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Animaguia</a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="animais-da-fazenda.html">Fazenda</a>
+            <a href="animais-do-zoologico.html">Zoológico</a>
+            <a href="animais-do-aquario.html">Aquário</a>
+            <a href="animais-domesticos.html" class="active">Domésticos</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+        <button id="theme-toggle" title="Alterar tema">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Meus Amigos de Estimação</h1>
+            <p>Vamos conhecer alguns dos animais domésticos mais comuns que vivem conosco!</p>
+        </div>
+        <div class="animal-grid">
+            <div class="animal-card" data-nome="Cachorro" data-cientifico="Canis lupus familiaris" data-habitat="Casas e quintais" data-alimentacao="Onívora" data-tamanho="Varia de 15 cm a 1 metro" data-peso="Varia de 1 kg a 70 kg" data-vida="10 a 13 anos" data-curiosidade="Têm um olfato até 100.000 vezes melhor que o dos humanos!">
+                <img src="img/cachorro.jpg" alt="Cachorro">
+                <div class="animal-card-content">
+                    <h3>Cachorro</h3>
+                    <p>O cachorro é conhecido como o melhor amigo do homem. São leais, amorosos e proporcionam companhia e segurança.</p>
+                    <button class="info-button">Mais Informações</button>
                 </div>
             </div>
-        </section>
-    </body>
-    <footer>
-        <h2>Animaguia</h2>
-        <div class="footerLinks">
-            <a href="index.html">Início</a>
-            <a href="animais-da-fazenda.html">Animais da Fazenda</a>
-            <a href="animais-do-zoologico.html">Animais do Zoológico</a>
-            <a href="animais-do-aquario.html">Animais do Aquário</a>
-            <a href="animais-domesticos.html">Animais Domésticos</a>
+            <div class="animal-card" data-nome="Gato" data-cientifico="Felis catus" data-habitat="Casas e apartamentos" data-alimentacao="Carnívora" data-tamanho="Varia de 20 a 40 cm" data-peso="Varia de 3 a 7 kg" data-vida="12 a 15 anos" data-curiosidade="Têm um órgão especial que lhes permite 'cheirar' com a boca, ajudando a detectar feromônios.">
+                <img src="img/gato.jfif" alt="Gato">
+                <div class="animal-card-content">
+                    <h3>Gato</h3>
+                    <p>Os gatos são animais independentes e curiosos, conhecidos por sua habilidade de caça e por serem ótimos companheiros.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Peixe" data-cientifico="Varia conforme a espécie" data-habitat="Aquários domésticos" data-alimentacao="Onívora" data-tamanho="Varia de 2 a 30 cm" data-peso="Varia de gramas a 1 kg" data-vida="1 a 10 anos" data-curiosidade="Alguns peixes, como o Betta, são conhecidos por sua agressividade e territorialidade.">
+                <img src="img/peixe.jpg" alt="Peixe">
+                <div class="animal-card-content">
+                    <h3>Peixe</h3>
+                    <p>Os peixes são animais aquáticos que podem ser mantidos em aquários. São conhecidos pela variedade de cores e formas.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Hamster" data-cientifico="Mesocricetus auratus (exemplo)" data-habitat="Gaiolas domésticas" data-alimentacao="Onívora" data-tamanho="Varia de 10 a 20 cm" data-peso="Varia de 100 a 200 g" data-vida="2 a 3 anos" data-curiosidade="Possuem bochechas expansíveis que usam para armazenar e transportar comida!">
+                <img src="img/hamster.webp" alt="Hamster">
+                <div class="animal-card-content">
+                    <h3>Hamster</h3>
+                    <p>Os hamsters são pequenos roedores populares como animais de estimação devido ao seu tamanho e personalidade amigável.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Coelho" data-cientifico="Oryctolagus cuniculus" data-habitat="Gaiolas ou áreas cercadas" data-alimentacao="Herbívora" data-tamanho="Varia de 20 a 50 cm" data-peso="Varia de 1 a 5 kg" data-vida="8 a 12 anos" data-curiosidade="Seus dentes crescem continuamente, por isso precisam roer objetos para desgastá-los.">
+                <img src="img/coelho.webp" alt="Coelho">
+                <div class="animal-card-content">
+                    <h3>Coelho</h3>
+                    <p>Os coelhos são animais sociais e afetuosos que gostam de companhia, conhecidos por suas orelhas longas.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Papagaio" data-cientifico="Varia conforme a espécie" data-habitat="Gaiolas ou viveiros" data-alimentacao="Onívora" data-tamanho="Varia de 20 cm a 1 metro" data-peso="Varia de 100 g a 1 kg" data-vida="Até 80 anos" data-curiosidade="Têm uma língua muscular que lhes permite manipular objetos e alimentos com grande habilidade.">
+                <img src="img/papagaio.jfif" alt="Papagaio">
+                <div class="animal-card-content">
+                    <h3>Papagaio</h3>
+                    <p>Os papagaios são aves inteligentes e coloridas que podem aprender a imitar sons e palavras. São muito sociais.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
         </div>
-        <p><a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF">Repositório no GitHub</a><br>Versão 0.2.4 &copy 2025 </p>
+    </main>
+    <div id="animal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <ul id="modal-details"></ul>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-container">
+             <div class="footer-column">
+                <h3 class="logo">Animaguia</h3>
+                <p>Seu guia completo para o fascinante mundo dos animais.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Páginas</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="animais-da-fazenda.html">Fazenda</a></li>
+                    <li><a href="animais-do-zoologico.html">Zoológico</a></li>
+                    <li><a href="animais-do-aquario.html">Aquário</a></li>
+                    <li><a href="animais-domesticos.html">Domésticos</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Integrantes</h3>
+                <ul>
+                    <li>Arthur Lourencini</li>
+                    <li>Bruno Carvalho de Oliveira</li>
+                    <li>Gustavo Duarte Strob</li>
+                    <li>Miguel Cardoso Alcalde</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sobre o Projeto</h3>
+                <p>Projeto educativo para a disciplina de Web Design.</p>
+                <a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF" target="_blank">Repositório no GitHub →</a>
+            </div>
+        </div>
     </footer>
+    <a href="#" id="back-to-top" class="back-to-top-button" title="Voltar ao topo">↑</a>
+</body>
 </html>

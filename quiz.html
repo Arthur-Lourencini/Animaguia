@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animaguia | Início</title>
+    <title>Animaguia | Quiz</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
@@ -12,12 +12,12 @@
     <header>
         <a href="index.html" class="logo">Animaguia</a>
         <nav>
-            <a href="index.html" class="active">Início</a>
+            <a href="index.html">Início</a>
             <a href="animais-da-fazenda.html">Fazenda</a>
             <a href="animais-do-zoologico.html">Zoológico</a>
             <a href="animais-do-aquario.html">Aquário</a>
             <a href="animais-domesticos.html">Domésticos</a>
-            <a href="quiz.html">Quiz</a>
+            <a href="quiz.html" class="active">Quiz</a>
         </nav>
         <button id="theme-toggle" title="Alterar tema">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -26,41 +26,36 @@
     </header>
 
     <main class="container">
-        <section class="hero">
-            <h1>Bem-Vindo ao Animaguia! 🌍</h1>
-            <p>Seu guia completo para o fascinante mundo dos animais. Explore diferentes habitats e descubra curiosidades incríveis sobre cada criatura!</p>
-        </section>
-
-        <section class="category-grid">
-            <a href="animais-da-fazenda.html" class="category-card" id="card-fazenda">
-                <img src="img/fazenda.webp" alt="Ícone de Fazenda">
-                <h2>Fazenda</h2>
-            </a>
-            <a href="animais-do-zoologico.html" class="category-card" id="card-zoologico">
-                <img src="img/zoológico.webp" alt="Ícone de Zoológico">
-                <h2>Zoológico</h2>
-            </a>
-            <a href="animais-do-aquario.html" class="category-card" id="card-aquario">
-                <img src="img/aquario.webp" alt="Ícone de Aquário">
-                <h2>Aquário</h2>
-            </a>
-            <a href="animais-domesticos.html" class="category-card" id="card-domesticos">
-                <img src="img/casa.webp" alt="Ícone de Domésticos">
-                <h2>Domésticos</h2>
-            </a>
-        </section>
-    </main>
-
-    <section class="discover-section">
-        <div class="container">
-            <h2>Descubra o Mundo Animal</h2>
-            <p>Cada seção do Animaguia é dedicada a um grupo de animais especial, com informações científicas, curiosidades fascinantes e imagens para tornar o aprendizado mais interessante e divertido!</p>
+        <div class="quiz-container">
+            <h1>Quiz Animal!</h1>
+            <p>Teste seus conhecimentos sobre o mundo animal.</p>
+            <div id="quiz-area">
+                <h2 id="question">Texto da Pergunta</h2>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Resposta 1</button>
+                </div>
+                <div class="quiz-controls">
+                    <div id="feedback-image-container" class="hide">
+                        <img id="feedback-image" src="" alt="Imagem do animal correto">
+                    </div>
+                    <p id="feedback-text"></p>
+                    <button id="next-btn" class="hide">Próximo</button>
+                </div>
+            </div>
+            <div id="score-container" class="hide">
+                <h2 id="score-title">Fim de Jogo!</h2>
+                <p id="score-text">Sua pontuação final é...</p>
+                <div class="score-buttons">
+                    <button id="restart-btn">Reiniciar Quiz</button>
+                    <a href="index.html" class="btn-home">Página Inicial</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </main>
 
     <footer>
         <div class="container footer-container">
-            <div class="footer-column">
+             <div class="footer-column">
                 <h3 class="logo">Animaguia</h3>
                 <p>Seu guia completo para o fascinante mundo dos animais.</p>
             </div>
@@ -91,7 +86,6 @@
             </div>
         </div>
     </footer>
-
     <a href="#" id="back-to-top" class="back-to-top-button" title="Voltar ao topo">↑</a>
 </body>
 </html>

@@ -1,190 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Animaguia | Animais do Zoológico</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body id="zoologicoBody">
-        <header>
-            <button id="titulo" class="collapseNav">
-                <h1 id="TitPrin">Animaguia</h1>
-            </button>
-            <nav class="contentNav">
-                <ul>
-                    <div class="navFlex">
-                        <a href="index.html"><img src="img/início.webp" alt="Início"><li>Início</li></a>
-                        <a href="animais-da-fazenda.html"><img src="img/fazenda.webp" alt="Animais da Fazenda"><li>Animais da Fazenda</li></a>
-                        <a href="animais-do-zoologico.html"><img src="img/zoológico.webp" alt="Animais do Zoológico"><li>Animais do Zoológico</li></a>
-                        <a href="animais-do-aquario.html"><img src="img/aquario.webp" alt="Animais do Aquário"><li>Animais do Aquário</li></a>
-                        <a href="animais-domesticos.html"><img src="img/casa.webp" alt="Animais Domésticos"><li>Animais Domésticos</li></a>
-                    </div>
-                </ul>
-            </nav>
-        </header>
-        <section class="main">
-            <div class="pageFlex">
-                <div class="contentFlex">
-                    <article class="PageContent">
-                        <h2>O Zoológico da Cidade</h2>
-                        <p id="zoo">Vamos explorar alguns dos animais incríveis que vivem no zoológico da nossa cidade!</p>
-                        <div class="artigoDisplay" id="leao">
-                            <section>
-                                <h3>Leão</h3>
-                                <img src="img/leão.webp" alt="Leão">
-                                <p>O leão é conhecido como o "rei da selva" devido à sua majestade e força. Eles vivem em grupos chamados de bandos e são encontrados principalmente na África, logo abaixo do deserto Saara.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Panthera leo</em></li>
-                                    <li><strong>Habitat:</strong> Savanas, pastagens e áreas abertas</li>
-                                    <li><strong>Alimentação:</strong> Carnívora (principalmente grandes mamíferos)</li>
-                                    <li><strong>Tamanho:</strong> 1,2 metros de altura no ombro</li>
-                                    <li><strong>Peso:</strong> 150 a 250 kg (machos), 100 a 130 kg (fêmeas)</li>
-                                    <li><strong>Expectativa de Vida:</strong> 10 a 14 anos na natureza</li>
-                                    <li><strong>Curiosidade:</strong> Os leões são os únicos felinos que vivem em grupos sociais!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="girafa">
-                            <section>
-                                <h3>Girafa</h3>
-                                <img src="img/girafa.jfif" alt="Girafa">
-                                <p>A girafa é o animal terrestre mais alto do mundo, conhecida por seu pescoço longo e manchas distintas. Elas são encontradas em savanas e florestas abertas na África.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Giraffa camelopardalis</em></li>
-                                    <li><strong>Habitat:</strong> Savanas e florestas abertas</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (folhas, brotos, frutas)</li>
-                                    <li><strong>Tamanho:</strong> 4,5 a 6 metros de altura</li>
-                                    <li><strong>Peso:</strong> 800 a 1.200 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 25 a 30 anos na natureza</li>
-                                    <li><strong>Curiosidade:</strong> A língua da girafa pode medir até 45 cm de comprimento e é usada para alcançar folhas em árvores altas!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="elefante">
-                            <section>
-                                <h3>Elefante</h3>
-                                <img src="img/elefante.jpg" alt="Elefante">
-                                <p>O elefante é o maior animal terrestre do mundo, conhecido por sua inteligência e memória excepcionais. Eles são encontrados em várias regiões da África e da Ásia.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Loxodonta africana (elefante africano), Elephas maximus (elefante asiático)</em></li>
-                                    <li><strong>Habitat:</strong> Savanas, florestas e áreas de mato</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (gramíneas, folhas, frutas)</li>
-                                    <li><strong>Tamanho:</strong> 3 a 4 metros de altura no ombro</li>
-                                    <li><strong>Peso:</strong> 2.500 a 6.000 kg (elefante africano), 2.000 a 5.000 kg (elefante asiático)</li>
-                                    <li><strong>Expectativa de Vida:</strong> 60 a 70 anos na natureza</li>
-                                    <li><strong>Curiosidade:</strong> Os elefantes são conhecidos por sua capacidade de se comunicar através de sons de baixa frequência que podem viajar longas distâncias!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="hipopotamo">
-                            <section>
-                                <h3>Hipopótamo</h3>
-                                <img src="img/hipopotamo.jpg" alt="Hipopótamo">
-                                <p>O hipopótamo é um grande mamífero semi-aquático conhecido por seu corpo robusto e boca enorme. Eles passam a maior parte do tempo na água para se manterem frescos e são encontrados em rios e lagos na África.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Hippopotamus amphibius</em></li>
-                                    <li><strong>Habitat:</strong> Rios, lagos e áreas alagadas</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (gramíneas)</li>
-                                    <li><strong>Tamanho:</strong> 1,5 a 1,7 metros de altura no ombro</li>
-                                    <li><strong>Peso:</strong> 1.500 a 3.200 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 40 a 50 anos na natureza</li>
-                                    <li><strong>Curiosidade:</strong> Apesar de seu corpo pesado, os hipopótamos podem correr a velocidades de até 30 km/h em terra!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="macaco">
-                            <section>
-                                <h3>Macaco</h3>
-                                <img src="img/macaco.webp" alt="Macaco">
-                                <p>Os macacos são primatas inteligentes e sociais, conhecidos por sua habilidade de usar ferramentas e resolver problemas. Eles são encontrados em várias regiões do mundo, principalmente em florestas tropicais.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> Varia conforme a espécie (ex: <em>Cebus capucinus</em> para o macaco-prego)</li>
-                                    <li><strong>Habitat:</strong> Florestas tropicais, savanas e áreas montanhosas</li>
-                                    <li><strong>Alimentação:</strong> Onívora (frutas, folhas, insetos, pequenos animais)</li>
-                                    <li><strong>Tamanho:</strong> Varia conforme a espécie (30 cm a 1 metro de comprimento)</li>
-                                    <li><strong>Peso:</strong> Varia conforme a espécie (1 a 30 kg)</li>
-                                    <li><strong>Expectativa de Vida:</strong> 15 a 40 anos, dependendo da espécie</li>
-                                    <li><strong>Curiosidade:</strong> Alguns macacos são conhecidos por sua capacidade de aprender e usar ferramentas para obter alimento!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="rinoceronte">
-                            <section>
-                                <h3>Rinoceronte</h3>
-                                <img src="img/rinoceronte.jfif" alt="Rinoceronte">
-                                <p>O rinoceronte é um grande mamífero conhecido por seu corpo robusto e chifres distintos. Eles são encontrados em várias regiões da África e da Ásia, principalmente em savanas e florestas.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> Varia conforme a espécie (ex: <em>Ceratotherium simum</em> para o rinoceronte-branco)</li>
-                                    <li><strong>Habitat:</strong> Savanas, florestas e áreas de mato</li>
-                                    <li><strong>Alimentação:</strong> Herbívora (gramíneas, folhas, brotos)</li>
-                                    <li><strong>Tamanho:</strong> 1,5 a 1,8 metros de altura no ombro</li>
-                                    <li><strong>Peso:</strong> 800 a 2.300 kg, dependendo da espécie</li>
-                                    <li><strong>Expectativa de Vida:</strong> 35 a 50 anos na natureza</li>
-                                    <li><strong>Curiosidade:</strong> Os rinocerontes têm uma pele muito espessa que pode ter até 5 cm de espessura, ajudando a protegê-los de predadores e do sol!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <hr>
-                        <div class="artigoDisplay" id="flamingo">
-                            <section>
-                                <h3>Flamingo</h3>
-                                <img src="img/flamingo.jpg" alt="Flamingo">
-                                <p>O flamingo é uma ave conhecida por sua plumagem rosa vibrante e pernas longas. Eles são encontrados em lagoas, lagos salgados e áreas costeiras em várias partes do mundo.</p>
-                            </section>
-                            <aside>
-                                <button class="collapse articleInfo">Mais Informações</button>
-                                <ul class="content">
-                                    <li><strong>Nome Científico:</strong> <em>Phoenicopterus roseus</em></li>
-                                    <li><strong>Habitat:</strong> Lagoas, lagos salgados e áreas costeiras</li>
-                                    <li><strong>Alimentação:</strong> Onívora (algas, pequenos crustáceos, plâncton)</li>
-                                    <li><strong>Tamanho:</strong> 1,2 a 1,5 metros de altura</li>
-                                    <li><strong>Peso:</strong> 2 a 4 kg</li>
-                                    <li><strong>Expectativa de Vida:</strong> 20 a 30 anos na natureza</li>
-                                    <li><strong>Curiosidade:</strong> A cor rosa dos flamingos vem dos pigmentos chamados carotenoides, que estão presentes em sua dieta!</li>
-                                </ul>
-                            </aside>
-                        </div>
-                    </article>
-                </div>
-                <aside class="margin">
-                </aside>
-            </div>
-        </section>
-    </body>
-    <footer>
-        <h2>Animaguia</h2>
-        <div class="footerLinks">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaguia | Animais do Zoológico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Animaguia</a>
+        <nav>
             <a href="index.html">Início</a>
-            <a href="animais-da-fazenda.html">Animais da Fazenda</a>
-            <a href="animais-do-zoologico.html">Animais do Zoológico</a>
-            <a href="animais-do-aquario.html">Animais do Aquário</a>
-            <a href="animais-domesticos.html">Animais Domésticos</a>
+            <a href="animais-da-fazenda.html">Fazenda</a>
+            <a href="animais-do-zoologico.html" class="active">Zoológico</a>
+            <a href="animais-do-aquario.html">Aquário</a>
+            <a href="animais-domesticos.html">Domésticos</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+        <button id="theme-toggle" title="Alterar tema">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>O Zoológico da Cidade</h1>
+            <p>Vamos explorar alguns dos animais incríveis que vivem no zoológico da nossa cidade!</p>
         </div>
-        <p><a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF">Repositório no GitHub</a><br>Versão 0.2.4 &copy 2025 </p>
+        <div class="animal-grid">
+            <div class="animal-card" data-nome="Leão" data-cientifico="Panthera leo" data-habitat="Savanas e pastagens" data-alimentacao="Carnívora" data-tamanho="1,2 metros de altura" data-peso="150 a 250 kg" data-vida="10 a 14 anos" data-curiosidade="Os leões são os únicos felinos que vivem em grupos sociais!">
+                <img src="img/leão.webp" alt="Leão">
+                <div class="animal-card-content">
+                    <h3>Leão</h3>
+                    <p>O leão é conhecido como o "rei da selva" devido à sua majestade e força. Vivem em grupos chamados de bandos.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Girafa" data-cientifico="Giraffa camelopardalis" data-habitat="Savanas e florestas" data-alimentacao="Herbívora" data-tamanho="4,5 a 6 metros de altura" data-peso="800 a 1.200 kg" data-vida="25 a 30 anos" data-curiosidade="A língua da girafa pode medir até 45 cm de comprimento!">
+                <img src="img/girafa.jfif" alt="Girafa">
+                <div class="animal-card-content">
+                    <h3>Girafa</h3>
+                    <p>A girafa é o animal terrestre mais alto do mundo, conhecida por seu pescoço longo e manchas distintas.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Elefante" data-cientifico="Loxodonta africana / Elephas maximus" data-habitat="Savanas e florestas" data-alimentacao="Herbívora" data-tamanho="3 a 4 metros de altura" data-peso="2.500 a 6.000 kg" data-vida="60 a 70 anos" data-curiosidade="Comunicam-se através de sons de baixa frequência que viajam longas distâncias!">
+                <img src="img/elefante.jpg" alt="Elefante">
+                <div class="animal-card-content">
+                    <h3>Elefante</h3>
+                    <p>O elefante é o maior animal terrestre do mundo, conhecido por sua inteligência e memória excepcionais.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Hipopótamo" data-cientifico="Hippopotamus amphibius" data-habitat="Rios e lagos" data-alimentacao="Herbívora" data-tamanho="1,5 a 1,7 metros de altura" data-peso="1.500 a 3.200 kg" data-vida="40 a 50 anos" data-curiosidade="Apesar do peso, podem correr a velocidades de até 30 km/h em terra!">
+                <img src="img/hipopotamo.jpg" alt="Hipopótamo">
+                <div class="animal-card-content">
+                    <h3>Hipopótamo</h3>
+                    <p>O hipopótamo é um grande mamífero semi-aquático conhecido por seu corpo robusto e boca enorme.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Rinoceronte" data-cientifico="Ceratotherium simum (exemplo)" data-habitat="Savanas e florestas" data-alimentacao="Herbívora" data-tamanho="1,5 a 1,8 metros de altura" data-peso="800 a 2.300 kg" data-vida="35 a 50 anos" data-curiosidade="Sua pele pode ter até 5 cm de espessura!">
+                <img src="img/rinoceronte.jpg" alt="Rinoceronte">
+                <div class="animal-card-content">
+                    <h3>Rinoceronte</h3>
+                    <p>Os rinocerontes são grandes mamíferos conhecidos por seus chifres característicos no focinho.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+            <div class="animal-card" data-nome="Flamingo" data-cientifico="Phoenicopterus roseus" data-habitat="Lagoas e lagos salgados" data-alimentacao="Onívora" data-tamanho="1,2 a 1,5 metros de altura" data-peso="2 a 4 kg" data-vida="20 a 30 anos" data-curiosidade="Sua cor rosa vem dos pigmentos dos alimentos que consomem!">
+                <img src="img/flamingo.webp" alt="Flamingo">
+                <div class="animal-card-content">
+                    <h3>Flamingo</h3>
+                    <p>O flamingo é uma ave pernalta, de plumagem rosa ou vermelha, que vive em bandos em áreas aquáticas.</p>
+                    <button class="info-button">Mais Informações</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="animal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <ul id="modal-details"></ul>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-container">
+             <div class="footer-column">
+                <h3 class="logo">Animaguia</h3>
+                <p>Seu guia completo para o fascinante mundo dos animais.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Páginas</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="animais-da-fazenda.html">Fazenda</a></li>
+                    <li><a href="animais-do-zoologico.html">Zoológico</a></li>
+                    <li><a href="animais-do-aquario.html">Aquário</a></li>
+                    <li><a href="animais-domesticos.html">Domésticos</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Integrantes</h3>
+                <ul>
+                    <li>Arthur Lourencini</li>
+                    <li>Bruno Carvalho de Oliveira</li>
+                    <li>Gustavo Duarte Strob</li>
+                    <li>Miguel Cardoso Alcalde</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sobre o Projeto</h3>
+                <p>Projeto educativo para a disciplina de Web Design.</p>
+                <a href="https://github.com/MiguelAlcalde311205/Web-Design---AC2-e-AF" target="_blank">Repositório no GitHub →</a>
+            </div>
+        </div>
     </footer>
+    <a href="#" id="back-to-top" class="back-to-top-button" title="Voltar ao topo">↑</a>
+</body>
 </html>
