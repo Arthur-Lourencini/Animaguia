@@ -264,6 +264,12 @@ header nav a.active {
         font-weight: 700;
     }
 }
+
+@media (max-width: 840px) {
+    header nav a {
+        margin: 0 0.8em;
+    }
+}
 /* --- ESTILOS DO BOTÃO E MODAL --- */
 
 /* Botão 'Mais Informações' no Card */
