@@ -21,6 +21,81 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- NOVA LÓGICA DO MENU HAMBURGER ---
+    const navToggle = document.getElementById('nav-toggle');
+    const header = document.querySelector('header');
+    const mainNav = document.getElementById('main-nav');
+
+    if (navToggle && header && mainNav) {
+        const finalizeClose = () => {
+            // remove classes e desbloqueia scroll após animação de fechamento
+            header.classList.remove('nav-open', 'nav-closing');
+            document.body.classList.remove('no-scroll');
+        };
+
+        const closeNav = () => {
+            // inicia animação de fechamento; a remoção real ocorre em animationend
+            if (!header.classList.contains('nav-open')) return;
+            header.classList.add('nav-closing');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.title = 'Abrir menu';
+            // não remove nav-open aqui para que a animação possa rodar
+        };
+        const openNav = () => {
+            header.classList.remove('nav-closing'); // cancelar fechamento se estiver
+            header.classList.add('nav-open');
+            navToggle.setAttribute('aria-expanded', 'true');
+            navToggle.title = 'Fechar menu';
+            document.body.classList.add('no-scroll');
+        };
+
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            if (expanded) closeNav(); else openNav();
+        });
+
+        // garantir keyboard support
+        navToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navToggle.click();
+            }
+        });
+
+        // fechar ao clicar em um link do menu
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeNav();
+            });
+        });
+
+        // fechar ao clicar fora do header quando menu aberto
+        window.addEventListener('click', (e) => {
+            if (!header.contains(e.target) && (header.classList.contains('nav-open') || header.classList.contains('nav-closing'))) {
+                closeNav();
+            }
+        });
+
+        // fechar ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 850 && (header.classList.contains('nav-open') || header.classList.contains('nav-closing'))) {
+                // se estiver abrindo/aberto, finalize imediatamente (sem animação)
+                header.classList.remove('nav-open', 'nav-closing');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.title = 'Abrir menu';
+                document.body.classList.remove('no-scroll');
+            }
+        });
+
+        // ouvir fim da animação no nav para finalizar o fechamento
+        mainNav.addEventListener('animationend', (ev) => {
+            if (header.classList.contains('nav-closing')) {
+                finalizeClose();
+            }
+        });
+    }
+
     // --- LÓGICA DO MODAL ---
     const modal = document.getElementById('animal-modal');
     if (modal) {

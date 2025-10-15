@@ -12,7 +12,15 @@
 <body>
     <header>
         <a href="index.html" class="logo">Animaguia</a>
-        <nav>
+        <!-- novo botão hamburger para mobile -->
+        <button id="nav-toggle" aria-controls="main-nav" aria-expanded="false" title="Abrir menu" class="nav-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <nav id="main-nav">
             <a href="index.html" class="active">Início</a>
             <a href="animais-da-fazenda.html">Fazenda</a>
             <a href="animais-do-zoologico.html">Zoológico</a>

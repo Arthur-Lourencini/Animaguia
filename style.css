@@ -453,14 +453,51 @@ footer {
     animation: fadeIn 0.5s;
 }
 
-/* --- RESPONSIVIDADE E ANIMAÇÕES --- */
+/* --- BOTÃO HAMBURGER E NAV MOBILE --- */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-right: 8px;
+    color: var(--theme-toggle-icon);
+}
+.nav-toggle svg { stroke: var(--theme-toggle-icon); }
+
+/* Bloqueia scroll quando o menu estiver aberto */
+.no-scroll { overflow: hidden; }
+
 @media (max-width: 850px) {
-    header { flex-direction: column; padding: 1em; gap: 1em; }
-    header nav { order: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5em; }
-    header nav a { margin: 0 0.5em; }
-    #theme-toggle { order: 1; align-self: flex-end; }
+    /* mostrar hamburger, esconder nav por padrão */
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+    /* nav escondido por padrão em mobile */
+    header nav { display: none; position: absolute; top: 64px; left: 0; right: 0; z-index: 999; margin: 0; padding: 1em 2em; border-radius: 0 0 12px 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
+    /* quando o header tiver a classe nav-open, mostramos o menu */
+    header.nav-open nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        background-color: var(--header-bg);
+    }
+    header.nav-open nav a { padding: 0.8em 1em; font-size: 1.15em; border-bottom: 1px solid rgba(0,0,0,0.04); }
+    header.nav-open nav a:last-child { border-bottom: none; }
+
+    /* ajustar ordenação e layout no header mobile */
+    header { align-items: center; flex-direction: column; padding: 1em; gap: 0.5em; }
+    header nav { order: 2; width: 100%; }
+    header nav a { margin: 0; text-align: left; }
+    #theme-toggle { order: 1; align-self: flex-end; z-index: 1001; }
     header .logo { order: 0; }
+
     .hero h1, .page-header h1, .discover-section h2, .quiz-container h1 { font-size: 2.2em; }
+}
+
+/* garantir comportamento normal no desktop */
+@media (min-width: 851px) {
+    header nav { display: block !important; position: static; box-shadow: none; padding: 0; }
 }
 
 @media (max-width: 600px) {
@@ -476,5 +513,44 @@ footer {
     }
 }
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+/* --- ANIMAÇÕES DO MENU (ABRIR / FECHAR) --- */
+header nav {
+	/* ...existing mobile rule sets may override display; animation properties control visual transition */
+	animation-duration: 260ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.2,.9,.2,1);
+}
+
+/* aplicado quando o menu abre */
+header.nav-open nav {
+	animation-name: slideDown;
+}
+
+/* aplicado enquanto o menu está fechando */
+header.nav-closing nav {
+	animation-name: slideUp;
+}
+
+/* keyframes para deslizar / aparecer */
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* keyframes para subir / desaparecer */
+@keyframes slideUp {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-12px);
+	}
+}
