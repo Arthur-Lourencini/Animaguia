@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const animalData = {
                     nome: card.dataset.nome,
                     cientifico: card.dataset.cientifico,
+                    cientificoGeral: card.dataset.cientificoGeral,
                     habitat: card.dataset.habitat,
                     alimentacao: card.dataset.alimentacao,
                     tamanho: card.dataset.tamanho,
@@ -119,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
                 modalTitle.textContent = animalData.nome;
                 modalDetails.innerHTML = `
-                    <li><strong>Nome Científico:</strong> <i>${animalData.cientifico}</i></li>
+                    <li><strong>Nome Científico:</strong> <i>${animalData.cientifico}</i> ${animalData.cientificoGeral}</li>
                     <li><strong>Habitat:</strong> ${animalData.habitat}</li>
                     <li><strong>Alimentação:</strong> ${animalData.alimentacao}</li>
                     <li><strong>Tamanho:</strong> ${animalData.tamanho}</li>
