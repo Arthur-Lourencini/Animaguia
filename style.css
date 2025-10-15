@@ -194,6 +194,10 @@ header nav a.active {
     margin: 0;
 }
 
+.nav-toggle {
+    display: none; /* escondido por padrão, mostrado em mobile */
+}
+
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     header {
@@ -215,6 +219,49 @@ header nav a.active {
 
     .page-header h1 {
         font-size: 2.2em;
+    }
+
+    /* Mostrar toggle e esconder nav por padrão em mobile */
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    header nav {
+        display: none; /* fechado por padrão */
+        width: 100%;
+        margin-top: 0.8em;
+        background: #ffffff;
+        padding: 0.8em;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    /* Quando aberto, exibir em colunas (somente mobile) */
+    header nav.open {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* colunas no celular */
+        gap: 0.5em 0.8em;
+    }
+
+    header nav a {
+        margin: 0;
+        padding: 0.6em 0.8em;
+        border-bottom: none;
+        border-radius: 8px;
+        text-align: center;
+        color: #333;
+        background: transparent;
+    }
+
+    header nav a:hover {
+        background: #f1f8f1;
+    }
+
+    header nav a.active {
+        background: #e8f5e9;
+        color: #2e7d32;
+        font-weight: 700;
     }
 }
 /* --- ESTILOS DO BOTÃO E MODAL --- */
@@ -319,4 +366,42 @@ header nav a.active {
 @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
-}   
+}
+
+/* Botão toggle do nav (hamburger) */
+.nav-toggle {
+    /* display controlado pela media query para evitar sobrescrita */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4em;
+}
+.nav-toggle .hamburger {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #333;
+    position: relative;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 2px;
+    background: #333;
+    transition: transform 0.25s ease;
+}
+.nav-toggle .hamburger::before { top: -8px; }
+.nav-toggle .hamburger::after { top: 8px; }
+
+.nav-toggle[aria-expanded="true"] .hamburger {
+    background: transparent;
+}
+.nav-toggle[aria-expanded="true"] .hamburger::before {
+    transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .hamburger::after {
+    transform: translateY(-8px) rotate(-45deg);
+}

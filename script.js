@@ -60,4 +60,47 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    // --- Início: comportamento do nav colapsável ---
+    const navToggle = document.querySelector('.nav-toggle');
+    // preferir o id que colocamos nas pages; fallback para header nav
+    const headerNav = document.getElementById('site-nav') || document.querySelector('header nav');
+
+    if (navToggle && headerNav) {
+        navToggle.addEventListener('click', (e) => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            headerNav.classList.toggle('open');
+        });
+
+        // Fecha o nav ao clicar em qualquer link (útil no mobile)
+        headerNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (headerNav.classList.contains('open')) {
+                    headerNav.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Fecha ao clicar fora do header
+        document.addEventListener('click', (event) => {
+            if (headerNav.classList.contains('open')) {
+                const insideHeader = event.target.closest('header');
+                if (!insideHeader) {
+                    headerNav.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+
+        // Fecha ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && headerNav.classList.contains('open')) {
+                headerNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+    // --- Fim: comportamento do nav colapsável ---
 });

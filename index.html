@@ -12,7 +12,11 @@
 <body>
     <header>
         <a href="index.html" class="logo">Animaguia</a>
-        <nav>
+        <!-- Adicionado botão para toggling do nav -->
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+            <span class="hamburger"></span>
+        </button>
+        <nav id="site-nav">
             <a href="index.html" class="active">Início</a>
             <a href="animais-da-fazenda.html">Fazenda</a>
             <a href="animais-do-zoologico.html">Zoológico</a>
