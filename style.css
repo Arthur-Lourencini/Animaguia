@@ -291,6 +291,7 @@ footer {
 }
 
 .modal-content {
+    box-sizing: border-box;
     background-color: var(--modal-bg);
     margin: 10% auto; padding: 2em;
     width: 90%; max-width: 600px;
