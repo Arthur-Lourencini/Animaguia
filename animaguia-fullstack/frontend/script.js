@@ -1,105 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Animaguia carregado e pronto!');
+    console.log('Animaguia dinâmico carregado e pronto!');
 
     // --- LÓGICA DO SELETOR DE TEMA ---
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
     }
-
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-theme');
-            if (body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+            localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
         });
     }
 
-    // --- NOVA LÓGICA DO MENU HAMBURGER ---
+    // --- LÓGICA DO MENU HAMBURGER ---
     const navToggle = document.getElementById('nav-toggle');
     const header = document.querySelector('header');
     const mainNav = document.getElementById('main-nav');
-
     if (navToggle && header && mainNav) {
         const finalizeClose = () => {
-            // remove classes e desbloqueia scroll após animação de fechamento
             header.classList.remove('nav-open', 'nav-closing');
             document.body.classList.remove('no-scroll');
         };
-
         const closeNav = () => {
-            // inicia animação de fechamento; a remoção real ocorre em animationend
             if (!header.classList.contains('nav-open')) return;
             header.classList.add('nav-closing');
             navToggle.setAttribute('aria-expanded', 'false');
             navToggle.title = 'Abrir menu';
-            // não remove nav-open aqui para que a animação possa rodar
         };
         const openNav = () => {
-            header.classList.remove('nav-closing'); // cancelar fechamento se estiver
+            header.classList.remove('nav-closing');
             header.classList.add('nav-open');
             navToggle.setAttribute('aria-expanded', 'true');
             navToggle.title = 'Fechar menu';
             document.body.classList.add('no-scroll');
         };
-
         navToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             const expanded = navToggle.getAttribute('aria-expanded') === 'true';
             if (expanded) closeNav(); else openNav();
         });
-
-        // garantir keyboard support
-        navToggle.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                navToggle.click();
-            }
-        });
-
-        // fechar ao clicar em um link do menu
         mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                closeNav();
-            });
+            link.addEventListener('click', () => closeNav());
         });
-
-        // fechar ao clicar fora do header quando menu aberto
         window.addEventListener('click', (e) => {
             if (!header.contains(e.target) && (header.classList.contains('nav-open') || header.classList.contains('nav-closing'))) {
                 closeNav();
             }
         });
-
-        // fechar ao redimensionar para desktop
         window.addEventListener('resize', () => {
             if (window.innerWidth > 850 && (header.classList.contains('nav-open') || header.classList.contains('nav-closing'))) {
-                // se estiver abrindo/aberto, finalize imediatamente (sem animação)
                 header.classList.remove('nav-open', 'nav-closing');
                 navToggle.setAttribute('aria-expanded', 'false');
                 navToggle.title = 'Abrir menu';
                 document.body.classList.remove('no-scroll');
             }
         });
-
-        // ouvir fim da animação no nav para finalizar o fechamento
         mainNav.addEventListener('animationend', (ev) => {
             if (header.classList.contains('nav-closing')) {
                 finalizeClose();
             }
         });
     }
+    
 
-    // --- LÓGICA DO MODAL ---
+    // --- LÓGICA DO MODAL (AGORA DENTRO DE UMA FUNÇÃO) ---
     const modal = document.getElementById('animal-modal');
-    if (modal) {
-        const closeButton = modal.querySelector('.close-button');
+    
+    function setupModalLogic() {
+        if (!modal) return; 
+
         const infoButtons = document.querySelectorAll('.info-button');
         const modalTitle = modal.querySelector('#modal-title');
         const modalDetails = modal.querySelector('#modal-details');
@@ -132,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        const closeButton = modal.querySelector('.close-button');
         const closeModal = () => {
             modal.style.display = 'none';
         }
@@ -145,6 +118,65 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- (NOVO) LÓGICA DE CARREGAMENTO DINÂMICO DOS ANIMAIS ---
+    const animalGrid = document.getElementById('animal-grid-container');
+    if (animalGrid) { 
+        let categoria = '';
+        const pageTitle = document.title;
+        
+        if (pageTitle.includes('Fazenda')) categoria = 'fazenda';
+        else if (pageTitle.includes('Zoológico')) categoria = 'zoologico';
+        else if (pageTitle.includes('Aquáticos')) categoria = 'aquatico';
+        else if (pageTitle.includes('Domésticos')) categoria = 'domestico';
+
+        if (categoria) {
+            fetchAnimais(categoria);
+        }
+    }
+
+    async function fetchAnimais(categoria) {
+        try {
+            const response = await fetch(`/api/animais/${categoria}`);
+            if (!response.ok) {
+                throw new Error('Não foi possível carregar os dados.');
+            }
+            const animais = await response.json();
+            const grid = document.getElementById('animal-grid-container');
+            grid.innerHTML = ''; 
+
+            animais.forEach(animal => {
+                const cardHTML = `
+                <div class="animal-card" 
+                     data-nome="${animal.nome || ''}" 
+                     data-cientifico="${animal.cientifico || ''}"
+                     data-cientifico-geral="${animal.cientifico_geral || ''}"
+                     data-habitat="${animal.habitat || ''}"
+                     data-alimentacao="${animal.alimentacao || ''}"
+                     data-tamanho="${animal.tamanho || ''}"
+                     data-peso="${animal.peso || ''}"
+                     data-vida="${animal.vida || ''}"
+                     data-curiosidade="${animal.curiosidade || ''}">
+                    
+                    <img src="${animal.imagem_path}" alt="${animal.nome}">
+                    <div class="animal-card-content">
+                        <h3>${animal.nome}</h3>
+                        <p>${animal.descricao}</p>
+                        <button class="info-button">Mais Informações</button>
+                    </div>
+                </div>
+                `;
+                grid.innerHTML += cardHTML;
+            });
+            
+            setupModalLogic();
+
+        } catch (error) {
+            console.error('Erro ao buscar animais:', error);
+            const grid = document.getElementById('animal-grid-container');
+            grid.innerHTML = '<p>Erro ao carregar animais. Tente novamente mais tarde.</p>';
+        }
+    }
+    
     // --- LÓGICA PARA O BOTÃO VOLTAR AO TOPO ---
     const backToTopButton = document.getElementById('back-to-top');
     if (backToTopButton) {
@@ -157,16 +189,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         backToTopButton.addEventListener('click', (event) => {
             event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
     
     // --- LÓGICA DO QUIZ ---
     const quizContainer = document.querySelector('.quiz-container');
     if (quizContainer) {
+        //
         const allQuestions = [
             { question: "Qual destes animais é conhecido como o 'melhor amigo do homem'?", image: "img/cachorro.jpg", answers: [{ text: 'Gato', correct: false }, { text: 'Cachorro', correct: true }, { text: 'Papagaio', correct: false }, { text: 'Vaca', correct: false }] },
             { question: "Que animal da fazenda é famoso por produzir lã?", image: "img/ovelha.jfif", answers: [{ text: 'Porco', correct: false }, { text: 'Galinha', correct: false }, { text: 'Ovelha', correct: true }, { text: 'Pato', correct: false }] },
@@ -180,9 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
             { question: "Que animal doméstico é conhecido por sua independência e habilidade de caça?", image: "img/gato.jpg", answers: [{ text: 'Cachorro', correct: false }, { text: 'Gato', correct: true }, { text: 'Hamster', correct: false }, { text: 'Coelho', correct: false }] },
             { question: "Qual ave de fazenda pode reconhecer até 100 rostos diferentes?", image: "img/galinha.jpg", answers: [{ text: 'Pato', correct: false }, { text: 'Ganso', correct: false }, { text: 'Galinha', correct: true }, { text: 'Ovelha', correct: false }] },
             { question: "Qual destes peixes cartilaginosos é um predador de topo no oceano?", image: "img/tubarão.webp", answers: [{ text: 'Raia', correct: false }, { text: 'Tubarão', correct: true }, { text: 'Polvo', correct: false }, { text: 'Cavalo-marinho', correct: false }] },
+            
+            // --- INÍCIO DAS CORREÇÕES ---
             { question: "Apesar de pesado, que animal pode correr a 30 km/h e passa muito tempo na água?", image: "img/hipopotamo.jpg", answers: [{ text: 'Elefante', correct: false }, { text: 'Rinoceronte', correct: false }, { text: 'Hipopótamo', correct: true }, { text: 'Leão', correct: false }] },
             { question: "Qual ave doméstica é famosa por sua capacidade de imitar a fala humana?", image: "img/papagaio.jpg", answers: [{ text: 'Galinha', correct: false }, { text: 'Papagaio', correct: true }, { text: 'Pato', correct: false }, { text: 'Ganso', correct: false }] },
             { question: "Que animal de fazenda é criado principalmente para a produção de leite?", image: "img/vaca.jpg", answers: [{ text: 'Porco', correct: false }, { text: 'Ovelha', correct: false }, { text: 'Vaca', correct: true }, { text: 'Cabra', correct: false }] }
+            // --- FIM DAS CORREÇÕES ---
         ];
 
         let currentQuestions = [];
@@ -200,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const scoreText = document.getElementById('score-text');
         const restartButton = document.getElementById('restart-btn');
 
+        //
         function startQuiz() {
             currentQuestions = allQuestions.sort(() => Math.random() - 0.5).slice(0, 7);
             currentQuestionIndex = 0;
@@ -261,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function showScore() {
             quizArea.classList.add('hide');
-            scoreContainer.classList.remove('hide');
+            scoreContainer.classList.add('hide');
             scoreText.innerText = `Você acertou ${score} de ${currentQuestions.length} perguntas!`;
         }
 
@@ -275,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         nextButton.addEventListener('click', handleNextButton);
         restartButton.addEventListener('click', startQuiz);
+        
         startQuiz();
     }
 });

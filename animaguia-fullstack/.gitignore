@@ -1,0 +1,10 @@
+# Ignora a pasta de dependências do Node.js
+node_modules/
+
+# Ignora o banco de dados (Opcional, mas boa prática)
+# Se você quiser que o .db suba, apague a linha abaixo.
+*.db
+
+# Ignora arquivos de sistema
+.DS_Store
+Thumbs.db
